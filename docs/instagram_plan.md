@@ -31,6 +31,7 @@ Add `ffman22` as collaborator on every post and Reel before sharing (owner order
 
 ## Bios (23 Nov 2026)
 - Instagram: Lead Gameplay Animator at Ubisoft | AC Shadows & Black Flag | Unreal Authorized Instructor Gold | Teaching Unreal for Animators
+- Threads (@carlo.animator): same as Instagram bio, link = workshop URL
 - TikTok (80 max): Lead Gameplay Animator, Ubisoft | Unreal Instructor Gold | Unreal for Animators
 - YouTube About: owner LinkedIn summary, under 1000 chars, ends with the workshop link.
 

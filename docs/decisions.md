@@ -37,3 +37,4 @@
 | 23 Nov 2026 | ffman22 added as collaborator on Reel 1 (invite sent, owner must accept from ffman22) | Owner order |
 
 - reel-ac-short headline corrected to "Lead gameplay animator on AC Shadows: Claws of Awaji" (title, description, captions). Re-rendered and replaced everywhere: YouTube old lnFWG2gPMcY deleted, new 92FbF7tYSrg private, scheduled 28 Nov 21:00 UTC; TikTok old post deleted, new one scheduled 28 Nov 22:00 Paris. Instagram Reel 3 not posted yet (uses the new render).
+| 23 Nov 2026 | Threads account @carlo.animator created by owner on phone (Threads web had only the older ffman22 profile) | Threads links one profile to one Instagram account; brand must live on carlo.animator |
