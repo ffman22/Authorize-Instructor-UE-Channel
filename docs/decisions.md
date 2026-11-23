@@ -36,4 +36,4 @@
 | 23 Nov 2026 | YouTube Community post (intro card + long text + workshop link) published on owner "sube" | Owner order |
 | 23 Nov 2026 | ffman22 added as collaborator on Reel 1 (invite sent, owner must accept from ffman22) | Owner order |
 
-- reel-ac-short headline corrected to "Lead gameplay animator on AC Shadows: Claws of Awaji" (title, description, captions). Re-rendered; TikTok file re-encoded. YouTube video lnFWG2gPMcY still has the old burned-in headline: delete and re-upload pending owner OK (API cannot replace the file).
+- reel-ac-short headline corrected to "Lead gameplay animator on AC Shadows: Claws of Awaji" (title, description, captions). Re-rendered and replaced everywhere: YouTube old lnFWG2gPMcY deleted, new 92FbF7tYSrg private, scheduled 28 Nov 21:00 UTC; TikTok old post deleted, new one scheduled 28 Nov 22:00 Paris. Instagram Reel 3 not posted yet (uses the new render).

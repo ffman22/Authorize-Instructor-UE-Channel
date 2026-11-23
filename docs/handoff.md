@@ -3,7 +3,7 @@
 ## Checkpoint
 Checkpoint (23 Nov 2026, end of day; overwrite at every recap, never append; under 12 lines):
 - Windows: `.venv/Scripts/python.exe`. YouTube OAuth ok; slots 22:00 Madrid = 21:00 UTC. TikTok (@carloaninator) is manual via TikTok Studio in Chrome (files <10 MB in `out/post-ready/tiktok/`).
-- YouTube private+scheduled: lyra-short 23 Nov, curves-short 24, curves-long 25, promo-01 26, promo-02 27, reel-ac-short 28, promo-03 29, reel-nec-short 30, promo-04 1 Dec, reel-ac-full 29 Nov, reel-nec-full 2 Dec. TikTok mirrors Shorts+promos at 22:00 Madrid.
+- YouTube private+scheduled: lyra-short 23 Nov, curves-short 24, curves-long 25, promo-01 26, promo-02 27, reel-ac-short 28 (new id 92FbF7tYSrg), promo-03 29, reel-nec-short 30, promo-04 1 Dec, reel-ac-full 29 Nov, reel-nec-full 2 Dec. TikTok mirrors Shorts+promos at 22:00 Madrid.
 - Instagram @carlo.animator (Creator, Digital creator): bio, 4 links, Reel 1 (curves-short) and intro post live; ffman22 is collaborator on every post (memory rule). Plan, captions, stories in `docs/instagram_plan.md`. Next Reel 2 (lyra-short-web); intro story uploaded by owner (About me highlight); Tutorials, Reels, Workshop highlights still to create in the app.
 - Bios aligned with LinkedIn on Instagram, TikTok, YouTube About. YouTube Community intro post live with `data/brand/carlo-intro-card.jpg` (official badge file says 2026; owner may supply the Gold one).
 - Next: Lyra full video (data/clips/lyra-melee-combo.mp4, 56 min) Fri 27 Nov 17:00 UTC with chapters, then cross-link; Short has "(link after upload)" placeholder.
