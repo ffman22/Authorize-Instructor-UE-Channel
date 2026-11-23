@@ -16,6 +16,7 @@ Then follow `docs/setup_checklist.md` (YouTube and Instagram access).
 | `CLAUDE.md` | Rules for Claude sessions (read first) |
 | `docs/setup_checklist.md` | One-time owner steps |
 | `docs/posting_strategy.md` | Slots, copy rules, who does what |
+| `docs/instagram_plan.md` | Instagram Reels and Stories plan with captions |
 | `docs/rights_and_policy.md` | Clip rights and platform policy |
 | `docs/model_routing.md` | Which model does which work |
 | `docs/drive_catalog.md` | Where videos, images and renders live in Google Drive |

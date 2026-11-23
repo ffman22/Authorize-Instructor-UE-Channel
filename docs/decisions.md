@@ -27,3 +27,10 @@
 ## 2026-11-23 Workshop link on every video; channel link and watermark
 - `rights_gate` now fails a manifest whose description lacks the workshop URL unless `cta` is set; `_template` carries the link block. `build_video` supports `cta` (red end card below the video, last 3.5 s). Uploaded YouTube Shorts cannot be re-edited (no file swap), so the card applies to new renders only.
 - Channel: link "Join the Workshop" added in Studio profile; watermark (face on gold + UE U) published by the owner, display time "End of video". YouTube "Join" button is memberships (needs YPP) and cannot point to the workshop.
+| 23 Nov 2026 | Second Instagram account @carlo.animator for the channel; posts and stories drafted in `docs/instagram_plan.md`, nothing published until "publica" | Owner created it in the app, same Accounts Center login |
+| 23 Nov 2026 | Reel 1 (curves-short) published on @carlo.animator via web on owner "publica" | Instagram web has no scheduling or drafts |
+| 23 Nov 2026 | Intro post (owner photo) published on @carlo.animator with ffman22 as collaborator, on owner "publica" | Owner order; stories and highlights need the Instagram app |
+| 23 Nov 2026 | Bios aligned with owner LinkedIn: Instagram (125 chars), TikTok (79 chars), YouTube About (under 1000, adds Gold rank and iAnimate workshop); intro caption rewritten | Owner order: reflect real experience; employer mention OK per owner |
+| 23 Nov 2026 | Intro card `data/brand/carlo-intro-card.jpg` (owner photo, title, text-only gold badge) used for a YouTube Community post; not the official Epic badge | No Gold certificate file in Drive; owner can supply it |
+| 23 Nov 2026 | Intro card rebuilt with the official Unreal Authorized Instructor badge from Drive (`1771968068176.jpg`, saved as `data/brand/unreal-authorized-instructor-gold.jpg`) | Owner supplied the official badge; replaces the text-only badge |
+| 23 Nov 2026 | YouTube Community post (intro card + long text + workshop link) published on owner "sube" | Owner order |
