@@ -25,5 +25,5 @@
 - Workshop ends in December and ianimate.net is already advertising, so promos moved: promo-01 26 Nov, promo-02 27 Nov, promo-03 29 Nov, promo-04 1 Dec (22:00 Madrid / 21:00 UTC). YouTube via videos.update; TikTok scheduled posts cannot be edited, so they were deleted and re-uploaded.
 
 ## 2026-11-23 Workshop link on every video; channel link and watermark
-- `rights_gate` now fails a manifest whose description lacks the workshop URL unless `cta` is set; `_template` carries the link block. `build_video` supports `cta` (red end card, last 5 s). Uploaded YouTube Shorts cannot be re-edited (no file swap), so the card applies to new renders only.
+- `rights_gate` now fails a manifest whose description lacks the workshop URL unless `cta` is set; `_template` carries the link block. `build_video` supports `cta` (red end card below the video, last 3.5 s). Uploaded YouTube Shorts cannot be re-edited (no file swap), so the card applies to new renders only.
 - Channel: link "Join the Workshop" added in Studio profile; watermark (face on gold + UE U) published by the owner, display time "End of video". YouTube "Join" button is memberships (needs YPP) and cannot point to the workshop.

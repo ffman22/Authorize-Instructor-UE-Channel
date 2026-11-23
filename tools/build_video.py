@@ -117,7 +117,7 @@ def make_overlay(title, path, font_path):
     return len(lines)
 
 
-CTA_SECONDS = 5.0
+CTA_SECONDS = 3.5
 CTA_DEFAULT = {"text": "JOIN THE WORKSHOP", "sub": "Unreal for Animators - ianimate.net"}
 
 
