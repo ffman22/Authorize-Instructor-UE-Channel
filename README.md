@@ -18,6 +18,7 @@ Then follow `docs/setup_checklist.md` (YouTube and Instagram access).
 | `docs/posting_strategy.md` | Slots, copy rules, who does what |
 | `docs/rights_and_policy.md` | Clip rights and platform policy |
 | `docs/model_routing.md` | Which model does which work |
+| `docs/drive_catalog.md` | Where videos, images and renders live in Google Drive |
 | `docs/tools.md` | Every tool and API used |
 | `docs/context_budget.md` | Token budgets |
 | `docs/decisions.md` | Decisions log |
