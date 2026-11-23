@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sed -n '/^## Checkpoint/,/^## [^C]/p' docs/handoff.md | head -15"
+          }
+        ]
+      }
+    ]
+  }
+}

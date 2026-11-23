@@ -1,0 +1,22 @@
+{
+  "id": "template",
+  "title_lines": ["RANKING THE FUNNIEST", "FOOTBALL MOMENTS"],
+  "keywords": ["FUNNIEST", "FOOTBALL", "MOMENTS"],
+  "keyword_color": "#00C9B7",
+  "playback_order": [3, 6, 2, 5, 4, 1],
+  "clips": [
+    {"rank": 1, "file": "data/clips/c1.mp4", "label": "own goal", "take": "Peak chaos", "start": 0, "duration": 6, "rights": "own", "source_url": "", "credit": "", "proof": ""},
+    {"rank": 2, "file": "data/clips/c2.mp4", "label": "red card", "take": "Instant karma", "start": 0, "duration": 6, "rights": "own", "source_url": "", "credit": "", "proof": ""},
+    {"rank": 3, "file": "data/clips/c3.mp4", "label": "keeper fail", "take": "He regrets it", "start": 0, "duration": 6, "rights": "own", "source_url": "", "credit": "", "proof": ""},
+    {"rank": 4, "file": "data/clips/c4.mp4", "label": "slip", "take": "Gravity wins", "start": 0, "duration": 6, "rights": "own", "source_url": "", "credit": "", "proof": ""},
+    {"rank": 5, "file": "data/clips/c5.mp4", "label": "fan run", "take": "Security who?", "start": 0, "duration": 6, "rights": "own", "source_url": "", "credit": "", "proof": ""},
+    {"rank": 6, "file": "data/clips/c6.mp4", "label": "VAR drama", "take": "Not even close", "start": 0, "duration": 6, "rights": "own", "source_url": "", "credit": "", "proof": ""}
+  ],
+  "description": "Ranking the funniest football moments. #shorts #football #funny",
+  "video_file": "",
+  "hashtags": ["#shorts", "#football", "#funny"],
+  "ig_caption": "",
+  "first_comment": "What's your #1? Tell me below",
+  "privacy": "private",
+  "publish_at": ""
+}
