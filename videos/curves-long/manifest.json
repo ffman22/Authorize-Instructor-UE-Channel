@@ -18,6 +18,14 @@
     "#animation",
     "#gameanimation"
   ],
+  "tags": [
+    "animation curves",
+    "metadata curves",
+    "animation montage",
+    "additive animation",
+    "ik",
+    "blend in blend out"
+  ],
   "first_comment": "Questions? Ask below. Workshop: https://ianimate.net/workshops/unreal-for-animators",
   "ig_caption": "",
   "video_file": "data/clips/animation-curves-fix.mp4",

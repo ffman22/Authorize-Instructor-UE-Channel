@@ -13,7 +13,21 @@
   "proof": "",
   "credit": "",
   "description": "A full 3-hit melee combo system in Unreal Engine 5.7 on Lyra: early and late cancel windows, jog locomotion, jump attack, rush attack and dodge roll.\n\nFull tutorial: (link after upload)\n\nLearn Unreal Engine animation systems with me:\nWorkshop (Unreal for Animators): https://ianimate.net/workshops/unreal-for-animators\niAnimate on YouTube: https://www.youtube.com/@iAnimateWS\nTikTok: https://www.tiktok.com/@carloaninator\nMy channel: https://www.youtube.com/@Carlo-Animator",
-  "hashtags": ["#unrealengine", "#ue5", "#animation", "#gamedev"],
+  "hashtags": [
+    "#unrealengine",
+    "#ue5",
+    "#animation",
+    "#gamedev"
+  ],
+  "tags": [
+    "lyra",
+    "lyra starter game",
+    "melee combo",
+    "combo system",
+    "animation montage",
+    "animation curves",
+    "unreal engine 5.7"
+  ],
   "first_comment": "",
   "ig_caption": "Lyra melee combo with early and late cancel in UE5.7 #unrealengine #ue5 #gamedev #animation",
   "tiktok_caption": "Lyra melee combo with early and late cancel #unrealengine #ue5 #gamedev #animation",

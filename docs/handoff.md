@@ -8,4 +8,5 @@ Checkpoint (23 Nov 2026, end of day; overwrite at every recap, never append; und
 - Threads @carlo.animator created on phone by owner (linked to Instagram carlo.animator, not ffman22); web bio (same as Instagram) and workshop link set 23 Nov. Profile photo ok; intro thread (card + workshop + YouTube links) posted 23 Nov.
 - Bios aligned with LinkedIn on Instagram, TikTok, YouTube About. YouTube Community intro post live with `data/brand/carlo-intro-card.jpg` (official badge file says 2026; owner may supply the Gold one).
 - Next: Lyra full video (data/clips/lyra-melee-combo.mp4, 56 min) Fri 27 Nov 17:00 UTC with chapters, then cross-link; Short has "(link after upload)" placeholder.
+- Tags: base in `tools/tags_base.json` (+ manifest `tags`); live videos not yet updated to it (only new uploads), `anime montage` typo on lyra-short in Studio.
 - Open: first comment 403 (`q-yt-audit`); old ranking text in make-video/publish skills, haiku-checker, rights_and_policy, posting_strategy; category 27; `cta` re-renders; ffman22 must accept the collaborator invites (Reel 1 and intro post); square card version for YouTube feed.

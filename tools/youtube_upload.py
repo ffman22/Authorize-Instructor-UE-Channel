@@ -9,6 +9,7 @@ Credentials: client_secret.json -> token.json at the repo root (never printed).
 """
 import argparse
 import datetime as dt
+import json
 import sys
 from pathlib import Path
 
@@ -44,13 +45,29 @@ def build_title(manifest, long_video=False):
     return title[:MAX_TITLE - len(suffix)].rstrip() + suffix
 
 
-def build_tags(hashtags):
-    tags, total = [], 0
-    for h in hashtags:
-        t = h.lstrip("#")
+TAGS_BASE = Path(__file__).resolve().parent / "tags_base.json"
+
+
+def base_tags(manifest, long_video=False):
+    """Extra tags: manifest "tags", then topic, format and channel tags from tags_base.json."""
+    base = {}
+    if TAGS_BASE.is_file():
+        base = json.loads(TAGS_BASE.read_text(encoding="utf-8"))
+    topic = str(manifest.get("topic") or "").strip().lower()
+    topics = {k.lower(): v for k, v in (base.get("topics") or {}).items()}
+    fmt = "long" if long_video else "short"
+    return (list(manifest.get("tags") or []) + topics.get(topic, [])
+            + (base.get("formats") or {}).get(fmt, []) + base.get("channel", []))
+
+
+def build_tags(hashtags, extra=()):
+    tags, seen, total = [], set(), 0
+    for h in list(hashtags) + list(extra):
+        t = str(h).strip().lstrip("#").lower()
         cost = len(t) + (2 if " " in t else 0) + (1 if tags else 0)
-        if t and total + cost <= MAX_TAGS_CHARS:
+        if t and t not in seen and total + cost <= MAX_TAGS_CHARS:
             tags.append(t)
+            seen.add(t)
             total += cost
     return tags
 
@@ -91,7 +108,7 @@ def build_request(manifest, long_video=False):
         except ValueError as e:
             errors.append(f"publish_at: {e}")
     body = {
-        "snippet": {"title": title, "description": desc, "tags": build_tags(tags),
+        "snippet": {"title": title, "description": desc, "tags": build_tags(tags, base_tags(manifest, long_video)),
                     "categoryId": CATEGORY_ID},
         "status": status,
     }

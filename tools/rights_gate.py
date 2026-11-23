@@ -130,6 +130,9 @@ def check(manifest, check_files=False, manifest_path=None):
     hashtags = manifest.get("hashtags", [])
     if not isinstance(hashtags, list) or not all(isinstance(h, str) and h.strip() for h in hashtags):
         errors.append("hashtags: must be a list of non-empty strings")
+    tags = manifest.get("tags", [])
+    if not isinstance(tags, list) or not all(isinstance(t, str) and t.strip() for t in tags):
+        errors.append("tags: must be a list of non-empty strings")
     for key in ("ig_caption", "first_comment", "video_file", "publish_at", "description", "topic"):
         if key in manifest and not isinstance(manifest[key], str):
             errors.append(f"{key}: must be a string")

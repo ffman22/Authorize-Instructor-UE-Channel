@@ -19,6 +19,10 @@
     "#lumen",
     "#gamedev"
   ],
+  "tags": [
+    "lumen",
+    "light leaks"
+  ],
   "first_comment": "Which Lumen problem should I tackle next?",
   "ig_caption": "Stop Lumen light leaks in UE5 #unrealengine #ue5 #gamedev",
   "video_file": "",

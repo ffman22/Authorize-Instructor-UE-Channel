@@ -1,0 +1,46 @@
+{
+  "_note": "Base YouTube tags (the hidden Studio tags, not hashtags). youtube_upload.py builds: manifest hashtags, then manifest tags, then topic, format and channel tags below. Deduplicated, max 500 characters in total.",
+  "channel": [
+    "unreal engine 5",
+    "unreal engine",
+    "gamedev",
+    "game developer",
+    "game animation",
+    "3d animation"
+  ],
+  "formats": {
+    "short": [],
+    "long": []
+  },
+  "topics": {
+    "Animation": [
+      "animation blueprint ue5",
+      "animation system",
+      "locomotion system",
+      "unreal engine animation tutorial",
+      "technical animation"
+    ],
+    "Lighting": ["lumen", "unreal engine lighting", "ue5 lumen", "light leaks"],
+    "Materials": ["unreal engine materials", "material editor", "ue5 materials"],
+    "Niagara": ["niagara", "unreal engine vfx", "ue5 niagara"],
+    "Sequencer": ["sequencer", "unreal engine cinematics", "ue5 sequencer"],
+    "Reel": [
+      "animation reel",
+      "game animation reel",
+      "gameplay animation",
+      "lead gameplay animator",
+      "animator portfolio"
+    ],
+    "Workshop": [
+      "workshop",
+      "unreal for animators",
+      "ianimate",
+      "unreal engine workshop",
+      "unreal authorized instructor",
+      "learn unreal engine",
+      "animation blueprint ue5",
+      "locomotion system",
+      "technical animation"
+    ]
+  }
+}
