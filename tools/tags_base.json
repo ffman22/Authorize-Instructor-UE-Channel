@@ -1,7 +1,8 @@
 {
-  "_note": "Base YouTube tags (the hidden Studio tags, not hashtags). youtube_upload.py builds: manifest hashtags, then manifest tags, then topic, format and channel tags below. Deduplicated, max 500 characters in total. Scores seen in vidIQ 23 Nov 2026: strong = animation 76, unreal engine 5 tutorial 72, gamedev 67, animation montage unreal 64, animation blueprint ue5 61, ue5 59; weak but kept for workshop = unreal for animators 24, unreal engine for animators 30. Also: tutorial 66, tips 58, workshop 55 (owner read 23 Nov 2026).",
+  "_note": "Base YouTube tags (the hidden Studio tags, not hashtags). youtube_upload.py builds: manifest hashtags, then manifest tags, then topic, format and channel tags below. Deduplicated, max 500 characters in total. Scores seen in vidIQ 23 Nov 2026: strong = animation 76, unreal engine 5 tutorial 72, gamedev 67, animation montage unreal 64, animation blueprint ue5 61, ue5 59; weak but kept for workshop = unreal for animators 24, unreal engine for animators 30. Also: tutorial 66, tips 58, workshop 55 (owner read 23 Nov 2026). Low-scoring tags (gameanimation, unreal for animators, unreal engine for animators, animation blueprint unreal, animation sequencer ue5) stay on all animation content: they match what the videos show.",
   "channel": [
     "animation",
+    "gameanimation",
     "gamedev",
     "ue5",
     "unrealengine",
@@ -17,17 +18,8 @@
   },
   "topics": {
     "Animation": [
-      "unreal engine 5 tutorial",
-      "tutorial",
-      "tips",
-      "animation montage unreal",
-      "animation blueprint ue5",
-      "ue5 tutorial",
-      "animation blueprint unreal",
-      "animation sequencer ue5",
-      "animation system",
-      "locomotion system",
-      "technical animation"
+      "unreal for animators",
+      "unreal engine for animators"
     ],
     "Lighting": [
       "tutorial",
