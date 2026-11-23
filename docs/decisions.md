@@ -35,3 +35,5 @@
 | 23 Nov 2026 | Intro card rebuilt with the official Unreal Authorized Instructor badge from Drive (`1771968068176.jpg`, saved as `data/brand/unreal-authorized-instructor-gold.jpg`) | Owner supplied the official badge; replaces the text-only badge |
 | 23 Nov 2026 | YouTube Community post (intro card + long text + workshop link) published on owner "sube" | Owner order |
 | 23 Nov 2026 | ffman22 added as collaborator on Reel 1 (invite sent, owner must accept from ffman22) | Owner order |
+
+- reel-ac-short headline corrected to "Lead gameplay animator on AC Shadows: Claws of Awaji" (title, description, captions). Re-rendered; TikTok file re-encoded. YouTube video lnFWG2gPMcY still has the old burned-in headline: delete and re-upload pending owner OK (API cannot replace the file).
