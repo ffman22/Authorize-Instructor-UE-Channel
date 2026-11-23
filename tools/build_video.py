@@ -122,20 +122,34 @@ CTA_DEFAULT = {"text": "JOIN THE WORKSHOP", "sub": "Unreal for Animators - ianim
 
 
 def make_cta_overlay(cta, path, font_path):
-    """Transparent 1080x1920 PNG with a call-to-action card below the video."""
+    """Transparent 1080x1920 PNG with a call-to-action card (iAnimate 'i' + text) below the video."""
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
-    big = load_font(92, font_path)
-    small = load_font(46, font_path)
-    top, pad = 1420, 40
-    w1 = text_w(d, cta["text"], big, 6)
-    w2 = text_w(d, cta["sub"], small, 3)
-    box_w = min(W - 80, max(w1, w2) + 2 * 60)
-    d.rounded_rectangle(((W - box_w) // 2, top - pad, (W + box_w) // 2, top + 92 * 1.3 + 46 * 1.4 + pad),
-                        radius=32, fill=(214, 40, 57, 235))
-    d.text(((W - w1) // 2, top), cta["text"], font=big, fill=WHITE, stroke_width=6, stroke_fill=BLACK)
-    d.text(((W - w2) // 2, top + int(92 * 1.3)), cta["sub"], font=small, fill=WHITE,
-           stroke_width=3, stroke_fill=BLACK)
+    card_w, card_h, top = 940, 230, 1400
+    x0 = (W - card_w) // 2
+    d.rounded_rectangle((x0, top, x0 + card_w, top + card_h), radius=36, fill=(214, 40, 57, 235))
+    pad = 30
+    text_x = x0 + pad
+    logo = REPO_ROOT / "data" / "brand" / "ianimate-i.png"
+    if logo.exists():
+        side = card_h - 2 * pad
+        d.rounded_rectangle((x0 + pad, top + pad, x0 + pad + side, top + pad + side), radius=24, fill=(255, 255, 255, 255))
+        li = Image.open(logo).convert("RGBA")
+        scale = (side - 24) / li.height
+        li = li.resize((max(1, int(li.width * scale)), side - 24), Image.LANCZOS)
+        img.alpha_composite(li, (x0 + pad + (side - li.width) // 2, top + pad + 12))
+        text_x = x0 + pad + side + pad
+    max_w = x0 + card_w - pad - text_x
+    def fit(txt, size, stroke):
+        while size > 20 and text_w(d, txt, load_font(size, font_path), stroke) > max_w:
+            size -= 2
+        return load_font(size, font_path), size
+    big, bs = fit(cta["text"], 84, 5)
+    small, ss = fit(cta["sub"], 44, 2)
+    block_h = int(bs * 1.15) + int(ss * 1.3)
+    y = top + (card_h - block_h) // 2
+    d.text((text_x, y), cta["text"], font=big, fill=WHITE, stroke_width=5, stroke_fill=BLACK)
+    d.text((text_x, y + int(bs * 1.15)), cta["sub"], font=small, fill=WHITE, stroke_width=2, stroke_fill=BLACK)
     img.save(path)
 
 
