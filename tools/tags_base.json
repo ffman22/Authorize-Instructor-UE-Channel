@@ -1,9 +1,12 @@
 {
-  "_note": "Base YouTube tags (the hidden Studio tags, not hashtags). youtube_upload.py builds: manifest hashtags, then manifest tags, then topic, format and channel tags below. Deduplicated, max 500 characters in total.",
+  "_note": "Base YouTube tags (the hidden Studio tags, not hashtags). youtube_upload.py builds: manifest hashtags, then manifest tags, then topic, format and channel tags below. Deduplicated, max 500 characters in total. Scores seen in vidIQ 23 Nov 2026: strong = animation 76, unreal engine 5 tutorial 72, gamedev 67, animation montage unreal 64, animation blueprint ue5 61, ue5 59; weak but kept for workshop = unreal for animators 24, unreal engine for animators 30.",
   "channel": [
+    "animation",
+    "gamedev",
+    "ue5",
+    "unrealengine",
     "unreal engine 5",
     "unreal engine",
-    "gamedev",
     "game developer",
     "game animation",
     "3d animation"
@@ -14,16 +17,37 @@
   },
   "topics": {
     "Animation": [
+      "unreal engine 5 tutorial",
+      "animation montage unreal",
       "animation blueprint ue5",
+      "ue5 tutorial",
+      "animation blueprint unreal",
+      "animation sequencer ue5",
       "animation system",
       "locomotion system",
-      "unreal engine animation tutorial",
       "technical animation"
     ],
-    "Lighting": ["lumen", "unreal engine lighting", "ue5 lumen", "light leaks"],
-    "Materials": ["unreal engine materials", "material editor", "ue5 materials"],
-    "Niagara": ["niagara", "unreal engine vfx", "ue5 niagara"],
-    "Sequencer": ["sequencer", "unreal engine cinematics", "ue5 sequencer"],
+    "Lighting": [
+      "lumen",
+      "unreal engine lighting",
+      "ue5 lumen",
+      "light leaks"
+    ],
+    "Materials": [
+      "unreal engine materials",
+      "material editor",
+      "ue5 materials"
+    ],
+    "Niagara": [
+      "niagara",
+      "unreal engine vfx",
+      "ue5 niagara"
+    ],
+    "Sequencer": [
+      "sequencer",
+      "unreal engine cinematics",
+      "ue5 sequencer"
+    ],
     "Reel": [
       "animation reel",
       "game animation reel",
@@ -32,13 +56,19 @@
       "animator portfolio"
     ],
     "Workshop": [
-      "workshop",
+      "unreal engine 5 tutorial",
+      "animation blueprint ue5",
+      "ue5 tutorial",
       "unreal for animators",
+      "unreal engine for animators",
+      "animation blueprint unreal",
+      "animation montage unreal",
+      "animation sequencer ue5",
+      "workshop",
       "ianimate",
       "unreal engine workshop",
       "unreal authorized instructor",
       "learn unreal engine",
-      "animation blueprint ue5",
       "locomotion system",
       "technical animation"
     ]
