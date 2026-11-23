@@ -1,5 +1,5 @@
 {
-  "_note": "Base YouTube tags (the hidden Studio tags, not hashtags). youtube_upload.py builds: manifest hashtags, then manifest tags, then topic, format and channel tags below. Deduplicated, max 500 characters in total. Scores seen in vidIQ 23 Nov 2026: strong = animation 76, unreal engine 5 tutorial 72, gamedev 67, animation montage unreal 64, animation blueprint ue5 61, ue5 59; weak but kept for workshop = unreal for animators 24, unreal engine for animators 30.",
+  "_note": "Base YouTube tags (the hidden Studio tags, not hashtags). youtube_upload.py builds: manifest hashtags, then manifest tags, then topic, format and channel tags below. Deduplicated, max 500 characters in total. Scores seen in vidIQ 23 Nov 2026: strong = animation 76, unreal engine 5 tutorial 72, gamedev 67, animation montage unreal 64, animation blueprint ue5 61, ue5 59; weak but kept for workshop = unreal for animators 24, unreal engine for animators 30. Also: tutorial 66, tips 58, workshop 55 (owner read 23 Nov 2026).",
   "channel": [
     "animation",
     "gamedev",
@@ -18,6 +18,8 @@
   "topics": {
     "Animation": [
       "unreal engine 5 tutorial",
+      "tutorial",
+      "tips",
       "animation montage unreal",
       "animation blueprint ue5",
       "ue5 tutorial",
@@ -28,22 +30,30 @@
       "technical animation"
     ],
     "Lighting": [
+      "tutorial",
+      "tips",
       "lumen",
       "unreal engine lighting",
       "ue5 lumen",
       "light leaks"
     ],
     "Materials": [
+      "tutorial",
+      "tips",
       "unreal engine materials",
       "material editor",
       "ue5 materials"
     ],
     "Niagara": [
+      "tutorial",
+      "tips",
       "niagara",
       "unreal engine vfx",
       "ue5 niagara"
     ],
     "Sequencer": [
+      "tutorial",
+      "tips",
       "sequencer",
       "unreal engine cinematics",
       "ue5 sequencer"
@@ -59,6 +69,7 @@
       "unreal engine 5 tutorial",
       "animation blueprint ue5",
       "ue5 tutorial",
+      "tutorial",
       "unreal for animators",
       "unreal engine for animators",
       "animation blueprint unreal",
