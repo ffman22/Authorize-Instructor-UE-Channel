@@ -35,3 +35,9 @@ Add `ffman22` as collaborator on every post and Reel before sharing (owner order
 - YouTube About: owner LinkedIn summary, under 1000 chars, ends with the workshop link.
 
 - Intro card: `data/brand/carlo-intro-card.jpg` (source photo `carlo-portrait.jpg`). YouTube Community post ready in a Chrome tab, not published; waits for owner "publica".
+
+## Intro story (ready, owner uploads from the app)
+- File: `data/brand/story-intro-9x16.jpg` (1080x1920). Two link stickers, on two consecutive stories:
+  1. Unreal for Animators Workshop: https://ianimate.net/workshops/unreal-for-animators
+  2. YouTube Carlo Animator: https://www.youtube.com/@Carlo-Animator
+- Then add to the About me highlight.
