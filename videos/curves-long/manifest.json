@@ -1,0 +1,26 @@
+{
+  "id": "curves-long",
+  "format": "long",
+  "topic": "Animation",
+  "title": "Fix Animation Curve Values with Metadata Curves in Unreal Engine",
+  "source": {
+    "drive_file_id": "1AyJkmi_zeawJVYDfN9ACr0cI5R7nU425",
+    "file": "data/clips/animation-curves-fix.mp4"
+  },
+  "start": 0,
+  "rights": "own",
+  "proof": "",
+  "credit": "",
+  "description": "Animation curve values get distorted by the blend in and blend out times of a montage. In this short tutorial I show how to keep the exact values until the montage ends using Metadata Curves in Unreal Engine.\n\nChapters:\n0:00 Intro\n0:08 The problem: montage blending affects curve values\n1:23 The fix: metadata curves\n1:45 Adding a metadata curve to the animation\n2:30 Blueprint setup: dividing by the metadata curve\n3:47 Result: filtered curve values\n4:11 When to use it: additive corrections and IK\n\nLearn Unreal Engine animation systems with me:\nWorkshop (Unreal for Animators): https://ianimate.net/workshops/unreal-for-animators\niAnimate on YouTube: https://www.youtube.com/@iAnimateWS\nTikTok: https://www.tiktok.com/@carloaninator\nMy channel: https://www.youtube.com/@Carlo-Animator",
+  "hashtags": [
+    "#unrealengine",
+    "#ue5",
+    "#animation",
+    "#gameanimation"
+  ],
+  "first_comment": "Questions? Ask below. Workshop: https://ianimate.net/workshops/unreal-for-animators",
+  "ig_caption": "",
+  "video_file": "data/clips/animation-curves-fix.mp4",
+  "privacy": "private",
+  "publish_at": "2026-11-25T21:00:00Z"
+}

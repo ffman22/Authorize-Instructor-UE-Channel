@@ -1,22 +1,27 @@
 {
-  "id": "template",
-  "title_lines": ["RANKING THE FUNNIEST", "FOOTBALL MOMENTS"],
-  "keywords": ["FUNNIEST", "FOOTBALL", "MOMENTS"],
-  "keyword_color": "#00C9B7",
-  "playback_order": [3, 6, 2, 5, 4, 1],
-  "clips": [
-    {"rank": 1, "file": "data/clips/c1.mp4", "label": "own goal", "take": "Peak chaos", "start": 0, "duration": 6, "rights": "own", "source_url": "", "credit": "", "proof": ""},
-    {"rank": 2, "file": "data/clips/c2.mp4", "label": "red card", "take": "Instant karma", "start": 0, "duration": 6, "rights": "own", "source_url": "", "credit": "", "proof": ""},
-    {"rank": 3, "file": "data/clips/c3.mp4", "label": "keeper fail", "take": "He regrets it", "start": 0, "duration": 6, "rights": "own", "source_url": "", "credit": "", "proof": ""},
-    {"rank": 4, "file": "data/clips/c4.mp4", "label": "slip", "take": "Gravity wins", "start": 0, "duration": 6, "rights": "own", "source_url": "", "credit": "", "proof": ""},
-    {"rank": 5, "file": "data/clips/c5.mp4", "label": "fan run", "take": "Security who?", "start": 0, "duration": 6, "rights": "own", "source_url": "", "credit": "", "proof": ""},
-    {"rank": 6, "file": "data/clips/c6.mp4", "label": "VAR drama", "take": "Not even close", "start": 0, "duration": 6, "rights": "own", "source_url": "", "credit": "", "proof": ""}
+  "id": "unreal-lighting-01",
+  "format": "short",
+  "topic": "Lighting",
+  "title": "Fix Lumen light leaks in 10 seconds",
+  "source": {
+    "drive_file_id": "",
+    "file": "data/clips/lumen-lighting-full.mp4"
+  },
+  "start": "03:12",
+  "duration": 42,
+  "rights": "own",
+  "proof": "",
+  "credit": "",
+  "description": "Light leaking through your walls in Unreal Engine 5? Thicken the mesh or enable two-sided distance fields so Lumen stops seeing through it. Full video on the channel.\n\nLearn Unreal Engine animation systems with me:\nWorkshop (Unreal for Animators): https://ianimate.net/workshops/unreal-for-animators\niAnimate on YouTube: https://www.youtube.com/@iAnimateWS\nTikTok: https://www.tiktok.com/@carloaninator\nMy channel: https://www.youtube.com/@Carlo-Animator",
+  "hashtags": [
+    "#unrealengine",
+    "#ue5",
+    "#lumen",
+    "#gamedev"
   ],
-  "description": "Ranking the funniest football moments. #shorts #football #funny",
+  "first_comment": "Which Lumen problem should I tackle next?",
+  "ig_caption": "Stop Lumen light leaks in UE5 #unrealengine #ue5 #gamedev",
   "video_file": "",
-  "hashtags": ["#shorts", "#football", "#funny"],
-  "ig_caption": "",
-  "first_comment": "What's your #1? Tell me below",
   "privacy": "private",
   "publish_at": ""
 }

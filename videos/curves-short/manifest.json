@@ -1,0 +1,28 @@
+{
+  "id": "curves-short",
+  "format": "short",
+  "topic": "Animation",
+  "title": "Keep animation curves from blending in montages",
+  "source": {
+    "drive_file_id": "1AyJkmi_zeawJVYDfN9ACr0cI5R7nU425",
+    "file": "data/clips/animation-curves-fix.mp4"
+  },
+  "start": 211.5,
+  "duration": 50.5,
+  "rights": "own",
+  "proof": "",
+  "credit": "",
+  "description": "Montage blending ruining your animation curve values? Divide the curve by a metadata curve and the value stays exact until the montage ends. Great for additive corrections and IK.\n\nFull tutorial: https://www.youtube.com/watch?v=Dn_iRxQiN2M\n\nLearn Unreal Engine animation systems with me:\nWorkshop (Unreal for Animators): https://ianimate.net/workshops/unreal-for-animators\niAnimate on YouTube: https://www.youtube.com/@iAnimateWS\nTikTok: https://www.tiktok.com/@carloaninator\nMy channel: https://www.youtube.com/@Carlo-Animator",
+  "hashtags": [
+    "#unrealengine",
+    "#ue5",
+    "#animation",
+    "#gamedev"
+  ],
+  "first_comment": "Full tutorial: https://www.youtube.com/watch?v=Dn_iRxQiN2M",
+  "ig_caption": "Keep animation curves from blending in montages. Full tutorial on YouTube: https://www.youtube.com/watch?v=Dn_iRxQiN2M",
+  "tiktok_caption": "Keep animation curves from blending in montages #unrealengine #ue5 #gamedev #animation\nFull tutorial and workshop links in my bio. YouTube: https://www.youtube.com/watch?v=Dn_iRxQiN2M",
+  "video_file": "",
+  "privacy": "private",
+  "publish_at": "2026-11-24T21:00:00Z"
+}

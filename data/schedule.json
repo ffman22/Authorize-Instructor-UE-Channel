@@ -1,0 +1,293 @@
+{
+  "generated_utc": "2026-11-23T08:18:24Z",
+  "local_times_for_date": "2026-11-23",
+  "method": "view-weighted publish hour of Shorts (<=60 s); channels normalized to equal weight",
+  "shorts_analyzed": 5,
+  "thin_data": true,
+  "per_channel": {
+    "UCue7TFlrt9FxXarpsl872Dg": {
+      "title": "Unreal Sensei",
+      "videos_fetched": 41,
+      "shorts": 1,
+      "hour_views_utc": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "weekday_views_utc": {
+        "Mon": 0,
+        "Tue": 0,
+        "Wed": 0,
+        "Thu": 0,
+        "Fri": 0,
+        "Sat": 0,
+        "Sun": 0
+      }
+    },
+    "UCrrZx9bh7RMYhXvaN8BrbNg": {
+      "title": "Ali Elzoheiry",
+      "videos_fetched": 50,
+      "shorts": 1,
+      "hour_views_utc": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        12157,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "weekday_views_utc": {
+        "Mon": 0,
+        "Tue": 0,
+        "Wed": 0,
+        "Thu": 0,
+        "Fri": 0,
+        "Sat": 0,
+        "Sun": 12157
+      }
+    },
+    "UCPGJKkjYkbUNujTs7GuCSAQ": {
+      "title": "Ask A Dev",
+      "videos_fetched": 50,
+      "shorts": 1,
+      "hour_views_utc": [
+        1658,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "weekday_views_utc": {
+        "Mon": 0,
+        "Tue": 0,
+        "Wed": 0,
+        "Thu": 0,
+        "Fri": 1658,
+        "Sat": 0,
+        "Sun": 0
+      }
+    },
+    "UCp1e34nrTQqVXkNU5ekH9CQ": {
+      "title": "Smart Poly",
+      "videos_fetched": 50,
+      "shorts": 1,
+      "hour_views_utc": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        30473,
+        0,
+        0
+      ],
+      "weekday_views_utc": {
+        "Mon": 0,
+        "Tue": 0,
+        "Wed": 30473,
+        "Thu": 0,
+        "Fri": 0,
+        "Sat": 0,
+        "Sun": 0
+      }
+    },
+    "UCQv4mwerZLQVe3wPbsMc-qw": {
+      "title": "Unreal University ",
+      "videos_fetched": 50,
+      "shorts": 1,
+      "hour_views_utc": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2039,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "weekday_views_utc": {
+        "Mon": 0,
+        "Tue": 0,
+        "Wed": 0,
+        "Thu": 0,
+        "Fri": 0,
+        "Sat": 2039,
+        "Sun": 0
+      }
+    }
+  },
+  "merged_hour_share_utc": [
+    0.25,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.25,
+    0.0,
+    0.25,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.25,
+    0.0,
+    0.0
+  ],
+  "weekday_views_utc": {
+    "Mon": 0,
+    "Tue": 0,
+    "Wed": 30473,
+    "Thu": 0,
+    "Fri": 1658,
+    "Sat": 2039,
+    "Sun": 12157
+  },
+  "top_utc_slots": [
+    {
+      "utc": "00:00",
+      "share": 0.25,
+      "local": {
+        "Europe/Madrid": "01:00",
+        "America/New_York": "19:00"
+      }
+    },
+    {
+      "utc": "12:00",
+      "share": 0.25,
+      "local": {
+        "Europe/Madrid": "13:00",
+        "America/New_York": "07:00"
+      }
+    },
+    {
+      "utc": "14:00",
+      "share": 0.25,
+      "local": {
+        "Europe/Madrid": "15:00",
+        "America/New_York": "09:00"
+      }
+    }
+  ],
+  "eu_us_slots": [
+    {
+      "for": "Europe evening",
+      "utc": "21:00",
+      "share": 0.25,
+      "local": {
+        "Europe/Madrid": "22:00",
+        "America/New_York": "16:00"
+      },
+      "source": "data"
+    },
+    {
+      "for": "US evening",
+      "utc": "00:00",
+      "share": 0.25,
+      "local": {
+        "Europe/Madrid": "01:00",
+        "America/New_York": "19:00"
+      },
+      "source": "data"
+    }
+  ],
+  "note": "only 5 Shorts (< 30): treat slots as a weak signal; add channels or --videos"
+}

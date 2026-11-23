@@ -1,0 +1,12 @@
+{
+  "youtube": {
+    "video_id": "f-_v3SD4Kv8",
+    "url": "https://youtube.com/shorts/f-_v3SD4Kv8",
+    "format": "short",
+    "privacy": "private",
+    "publish_at": "2026-11-24T21:00:00.000Z",
+    "uploaded_at": "2026-11-23T08:48:39Z",
+    "file": "D:\\Projects\\Authorize-Instructor-UE-Channel\\out\\curves-short.mp4",
+    "first_comment_error": "HTTP 403 forbidden: The API project is not verified/audited for this call. See docs/setup_checklist.md item q-yt-audit (request the YouTube API compliance audit, or upload manually meanwhile)."
+  }
+}

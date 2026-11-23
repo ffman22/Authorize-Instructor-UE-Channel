@@ -23,13 +23,17 @@ Then follow `docs/setup_checklist.md` (YouTube and Instagram access).
 | `docs/context_budget.md` | Token budgets |
 | `docs/decisions.md` | Decisions log |
 | `docs/handoff.md` | Checkpoint |
-| `videos/_template/manifest.json` | Copy this to start a Short |
-| `tools/` | Rights gate, renderer, uploaders, slot picker, budget check |
+| `videos/_template/manifest.json` | Copy this to start a Short (one tip, one cut of one own video) |
+| `tools/rights_gate.py` | Validates a tip manifest (rights, source, cut <= 60 s, privacy); exit 0 = pass |
+| `tools/build_video.py` | Renders `out/<id>.mp4` 1080x1920 from the cut: blurred-fill fit, headline, source audio, optional `cta` end card (workshop); `--selftest` |
+| `data/brand/` | Channel watermark PNGs (150x150): `watermark-150-u.png`, `watermark-150-ue.png` |
+| `tools/youtube_upload.py` | Private/scheduled upload; `--long` or `format: long` skips `#shorts` |
+| `tools/` (others) | Instagram publisher, slot picker, budget check |
 | `.claude/` | Agents, skills (`make-video`, `publish`, `daily-run`) and rules |
 
 ## Quick use
 ```
 cp -r videos/_template videos/unreal-lighting-01   # edit manifest.json
-.venv/bin/python tools/rights_gate.py videos/unreal-lighting-01/manifest.json
-.venv/bin/python tools/build_video.py videos/unreal-lighting-01/manifest.json
+.venv/Scripts/python.exe tools/rights_gate.py videos/unreal-lighting-01/manifest.json
+.venv/Scripts/python.exe tools/build_video.py videos/unreal-lighting-01/manifest.json
 ```

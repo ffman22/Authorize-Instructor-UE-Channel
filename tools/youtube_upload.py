@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Upload a rendered Short to YouTube (private or scheduled by default).
+"""Upload a Short or a long video to YouTube (private or scheduled by default).
 
 Usage: youtube_upload.py --auth
-       youtube_upload.py <manifest.json> [--video out/<id>.mp4] [--dry-run]
-Video: --video, else manifest "video_file" (e.g. a RankReel export), else out/<id>.mp4.
+       youtube_upload.py <manifest.json> [--video out/<id>.mp4] [--long] [--dry-run]
+Video: --video, else manifest "video_file", else out/<id>.mp4.
+Shorts get "#shorts" in the title; --long (or manifest "format": "long") skips it.
 Credentials: client_secret.json -> token.json at the repo root (never printed).
 """
 import argparse
@@ -29,8 +30,14 @@ AUDIT_HINT = ("The API project is not verified/audited for this call. See docs/s
               "item q-yt-audit (request the YouTube API compliance audit, or upload manually meanwhile).")
 
 
-def build_title(manifest):
-    title = " ".join(str(x).strip() for x in manifest.get("title_lines", []) if str(x).strip())
+def is_long(manifest, cli_long=False):
+    return cli_long or str(manifest.get("format") or "short").strip().lower() == "long"
+
+
+def build_title(manifest, long_video=False):
+    title = " ".join(str(manifest.get("title") or "").split())
+    if long_video:
+        return title[:MAX_TITLE]
     suffix = " #shorts"
     if "#shorts" in title.lower():
         return title[:MAX_TITLE]
@@ -58,18 +65,22 @@ def parse_publish_at(value):
     return t.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
 
 
-def build_request(manifest):
+def build_request(manifest, long_video=False):
     """Return (body, first_comment, errors)."""
     errors = []
     tags = norm_hashtags(manifest)
+    if long_video:
+        tags = [t for t in tags if t.lower() != "#shorts"]
     desc = with_hashtags(manifest.get("description", ""), tags)
     if len(desc) > MAX_DESC:
         errors.append(f"description: {len(desc)} chars, max {MAX_DESC}")
     if "<" in desc or ">" in desc:
         errors.append("description: YouTube rejects '<' and '>'")
-    title = build_title(manifest)
+    title = build_title(manifest, long_video)
     if not title.replace("#shorts", "").strip():
-        errors.append("title_lines: empty title")
+        errors.append("title: empty")
+    if long_video and "#shorts" in title.lower():
+        errors.append("title: contains #shorts but the upload is a long video")
     privacy = str(manifest.get("privacy") or "private").strip()
     status = {"privacyStatus": privacy, "selfDeclaredMadeForKids": False}
     publish_at = str(manifest.get("publish_at") or "").strip()
@@ -155,6 +166,7 @@ def main(argv=None):
     ap.add_argument("manifest", nargs="?", help="path to videos/<id>/manifest.json")
     ap.add_argument("--video", help="MP4 to upload (default: manifest video_file, else out/<id>.mp4)")
     ap.add_argument("--auth", action="store_true", help="run the OAuth consent flow and save token.json")
+    ap.add_argument("--long", action="store_true", help="long video: no #shorts in title or tags (also manifest format: long)")
     ap.add_argument("--dry-run", action="store_true", help="validate everything, no network")
     args = ap.parse_args(argv)
 
@@ -174,7 +186,8 @@ def main(argv=None):
         print(f"YOUTUBE REFUSED {args.manifest}: rights gate failed")
         return 1
     video = resolve_video(manifest, args.manifest, args.video)
-    body, first_comment, errors = build_request(manifest)
+    long_video = is_long(manifest, args.long)
+    body, first_comment, errors = build_request(manifest, long_video)
     warnings = []
     if not video.is_file():
         errors.append(f"video: not found: {video}")
@@ -191,7 +204,7 @@ def main(argv=None):
     sched = f", publishAt {s['publishAt']}" if "publishAt" in s else ""
     mode = "DRY-RUN" if args.dry_run else "UPLOAD"
     print(f"YOUTUBE {mode} {('OK' if args.dry_run else 'READY') if not errors else 'FAIL'} {video_id(manifest, args.manifest)}: "
-          f"'{body['snippet']['title']}', {s['privacyStatus']}{sched}, "
+          f"{'long' if long_video else 'short'}, '{body['snippet']['title']}', {s['privacyStatus']}{sched}, "
           f"{len(body['snippet']['tags'])} tags, first comment {'yes' if first_comment else 'none'}")
     for e in errors:
         print(f"  ERROR {e}")
@@ -213,7 +226,8 @@ def main(argv=None):
         print(f"  ERROR upload: {type(e).__name__}: {e}")
         return 1
     vid = resp["id"]
-    record = {"video_id": vid, "url": f"https://youtube.com/shorts/{vid}",
+    url = f"https://www.youtube.com/watch?v={vid}" if long_video else f"https://youtube.com/shorts/{vid}"
+    record = {"video_id": vid, "url": url, "format": "long" if long_video else "short",
               "privacy": s["privacyStatus"], "publish_at": s.get("publishAt", ""),
               "uploaded_at": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
               "file": str(video)}

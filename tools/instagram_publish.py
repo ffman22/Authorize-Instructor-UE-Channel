@@ -3,7 +3,7 @@
 
 Usage: instagram_publish.py <manifest.json> --video-url https://... [--video FILE] [--dry-run]
 The Graph API fetches the video from a public HTTPS URL; --video only checks the local copy
-(manifest "video_file" or out/<id>.mp4, e.g. a RankReel export) before you host it.
+(manifest "video_file" or out/<id>.mp4) before you host it.
 Credentials: IG_USER_ID and IG_ACCESS_TOKEN from the environment or .env (never printed).
 """
 import argparse

@@ -1,0 +1,28 @@
+{
+  "id": "workshop-promo-02",
+  "format": "short",
+  "topic": "Workshop",
+  "title": "Lead gameplay animator, AAA pipelines",
+  "source": {
+    "drive_file_id": "16MmB9iq__XPRGl6BA4SPeYR2TYkxKIxU",
+    "file": "data/clips/promo-workshop-v2.mov"
+  },
+  "start": 31,
+  "duration": 38.5,
+  "rights": "own",
+  "proof": "",
+  "credit": "",
+  "description": "Real-time animation pipelines for AAA games, from rigging to Unreal implementation. Meet your instructor, an Unreal Authorized Instructor.\n\nWorkshop: https://ianimate.net/workshops/unreal-for-animators\niAnimate on YouTube: https://www.youtube.com/@iAnimateWS",
+  "hashtags": [
+    "#unrealengine",
+    "#ue5",
+    "#gameanimation",
+    "#animation",
+    "#gamedev"
+  ],
+  "first_comment": "Workshop details and enrollment: https://ianimate.net/workshops/unreal-for-animators",
+  "ig_caption": "Lead gameplay animator, AAA pipelines\nWorkshop: ianimate.net/workshops/unreal-for-animators #unrealengine #ue5 #gameanimation",
+  "video_file": "",
+  "privacy": "private",
+  "publish_at": "2026-11-27T21:00:00Z"
+}

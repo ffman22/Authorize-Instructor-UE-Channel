@@ -10,7 +10,7 @@ def video_id(manifest, manifest_path):
 
 
 def resolve_video(manifest, manifest_path, cli_value=None):
-    """--video, else manifest video_file (RankReel export), else out/<id>.mp4."""
+    """--video, else manifest video_file, else out/<id>.mp4."""
     value = cli_value or str(manifest.get("video_file") or "").strip()
     if not value:
         return REPO_ROOT / "out" / f"{video_id(manifest, manifest_path)}.mp4"

@@ -1,0 +1,12 @@
+{
+  "youtube": {
+    "video_id": "02kXzKy5Xkw",
+    "url": "https://youtube.com/shorts/02kXzKy5Xkw",
+    "format": "short",
+    "privacy": "private",
+    "publish_at": "2026-11-27T21:00:00.000Z",
+    "uploaded_at": "2026-11-23T08:34:39Z",
+    "file": "D:\\Projects\\Authorize-Instructor-UE-Channel\\out\\workshop-promo-02.mp4",
+    "first_comment_error": "HTTP 403 forbidden: The API project is not verified/audited for this call. See docs/setup_checklist.md item q-yt-audit (request the YouTube API compliance audit, or upload manually meanwhile)."
+  }
+}
