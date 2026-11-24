@@ -14,6 +14,7 @@
 | 23 Nov 2026 | 4 workshop promo Shorts scheduled Fri/Tue 22:00 Madrid (21:00 UTC), 27 Nov to 8 Dec | Owner wants 2 per week; slots provisional (thin data) |
 | 23 Nov 2026 | Game reels (AC Shadows Claws of Awaji, Necromunda) published as rights `permission`; proof = owner's existing public uploads (YouTube BHfA_afUE2k, Vimeo 775571162) | Owner says he may publish them; game footage belongs to the studios, so proof URL is required in `proof` |
 | 23 Nov 2026 | Channel scope widened: tutorials, demo reels and industry commentary, not only Unreal tips | Owner: it is his professional animator channel |
+| 24 Nov 2026 | Voiceovers: owner records EN himself; Spanish Shorts only occasionally, generated | Owner decision; EN is the default for copy, captions and voice scripts |
 
 ## 2026-11-23 Lyra Short built from a pre-trimmed cut
 - Pipeline renders one contiguous cut, so the multi-part Short is first concatenated with ffmpeg into `data/clips/lyra-short-cut.mp4` (own footage: 120.3-128.1 recap tail (earlier part repeated the demo narration), 146.4-180.9 and 185.9-194.9 demo of `lyra-melee-combo.mp4`), then `videos/lyra-short` renders it (51.3 s). Not uploaded yet.
