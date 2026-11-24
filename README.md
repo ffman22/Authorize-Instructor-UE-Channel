@@ -37,6 +37,7 @@ Then follow `docs/setup_checklist.md` (YouTube and Instagram access).
 | `tools/make_thumbnail.py` | Best frame (Gemini picks, sharpness fallback) + brand headline: `out/thumbs/<id>-yt.jpg` 1280x720 and `<id>-cover.jpg` 1080x1920; `--critique` |
 | `.claude/skills/gemini/` | `/gemini <task>` quick access to `gemini_task.py` |
 | `.env.example` | Names of the `.env` keys (no values); copy to `.env` |
+| `installers/Instalar_Estudio_Voz_y_HyperFrames.bat` | Owner-run menu: local voice studio (Voicebox, CUDA) and HyperFrames Studio + skills for Claude and Gemini |
 | `tools/` (others) | Instagram publisher, slot picker, budget check |
 | `.claude/` | Agents, skills (`make-video`, `publish`, `daily-run`) and rules |
 
