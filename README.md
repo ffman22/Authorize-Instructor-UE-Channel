@@ -16,6 +16,8 @@ Then follow `docs/setup_checklist.md` (YouTube and Instagram access).
 | `CLAUDE.md` | Rules for Claude sessions (read first) |
 | `docs/setup_checklist.md` | One-time owner steps |
 | `docs/posting_strategy.md` | Slots, copy rules, who does what |
+| `docs/creator_brief.md` | Owner's standing requirements for thumbnails, audience, scripts, metrics, intro video (Gemini and Claude as manager and coach) |
+| `docs/creator_playbook.md` | Gemini-drafted playbook from the brief: thumbnail system, viewer profiles, script templates, metrics loop, intro video plan, weekly routine |
 | `docs/instagram_plan.md` | Instagram Reels and Stories plan with captions |
 | `docs/rights_and_policy.md` | Clip rights and platform policy |
 | `docs/model_routing.md` | Which model does which work |
@@ -35,9 +37,11 @@ Then follow `docs/setup_checklist.md` (YouTube and Instagram access).
 | `tools/find_moments.py` | Gemini watches an own long video (360p proxy, once, cached) and lists Short-sized tip moments; `--make-manifests` writes drafts with `ready_to_publish` false |
 | `tools/gemini_copy.py` | One Gemini call writes YouTube, Instagram, TikTok, Threads and Community copy for a manifest; `--apply` merges it if the rights gate passes |
 | `tools/make_thumbnail.py` | Best frame (Gemini picks, sharpness fallback) + brand headline: `out/thumbs/<id>-yt.jpg` 1280x720 and `<id>-cover.jpg` 1080x1920; `--critique` |
+| `tools/social_stats.py` | Pulls YouTube channel and video stats via the Data API into `data/social_stats.json`; `--ig/--tiktok/--threads followers,following,posts` add the other accounts. Feeds the Social Tracker artifact |
 | `.claude/skills/gemini/` | `/gemini <task>` quick access to `gemini_task.py` |
 | `.env.example` | Names of the `.env` keys (no values); copy to `.env` |
 | `installers/Instalar_Estudio_Voz_y_HyperFrames.bat` | Owner-run menu: local voice studio (Voicebox, CUDA) and HyperFrames Studio + skills for Claude and Gemini |
+| `data/voice_profiles/` | Owner's voice samples for Voicebox cloning (WAV 48 kHz, 24 bit, mono); contents git-ignored, own voice only |
 | `tools/` (others) | Instagram publisher, slot picker, budget check |
 | `.claude/` | Agents, skills (`make-video`, `publish`, `daily-run`) and rules |
 
