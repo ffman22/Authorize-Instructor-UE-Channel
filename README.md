@@ -30,6 +30,9 @@ Then follow `docs/setup_checklist.md` (YouTube and Instagram access).
 | `data/brand/` | Channel watermark PNGs (150x150) and `ianimate-i.png` (the iAnimate "i" used by the cta card) |
 | `tools/youtube_upload.py` | Private/scheduled upload; `--long` or `format: long` skips `#shorts`; tags = hashtags + manifest `tags` + `tags_base.json` |
 | `tools/tags_base.json` | Base YouTube tags by channel, format and topic (Animation, Lighting, Reel, Workshop...) |
+| `tools/gemini_task.py` | Sends a text task (+ optional `--file`) to Gemini; key `GEMINI_API_KEY` from `.env`; refuses credential files |
+| `.claude/skills/gemini/` | `/gemini <task>` quick access to `gemini_task.py` |
+| `.env.example` | Names of the `.env` keys (no values); copy to `.env` |
 | `tools/` (others) | Instagram publisher, slot picker, budget check |
 | `.claude/` | Agents, skills (`make-video`, `publish`, `daily-run`) and rules |
 
