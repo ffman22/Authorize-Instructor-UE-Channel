@@ -30,7 +30,11 @@ Then follow `docs/setup_checklist.md` (YouTube and Instagram access).
 | `data/brand/` | Channel watermark PNGs (150x150) and `ianimate-i.png` (the iAnimate "i" used by the cta card) |
 | `tools/youtube_upload.py` | Private/scheduled upload; `--long` or `format: long` skips `#shorts`; tags = hashtags + manifest `tags` + `tags_base.json` |
 | `tools/tags_base.json` | Base YouTube tags by channel, format and topic (Animation, Lighting, Reel, Workshop...) |
-| `tools/gemini_task.py` | Sends a text task (+ optional `--file`) to Gemini; key `GEMINI_API_KEY` from `.env`; refuses credential files |
+| `tools/gemini_client.py` | Shared Gemini client: text, images, video (Files API), JSON mode; cache in `out/gemini/cache/`, token log `out/gemini/usage.jsonl`, daily cap `GEMINI_DAILY_TOKENS` |
+| `tools/gemini_task.py` | Sends a text task (+ optional `--file`) to Gemini; refuses credential files; `--usage` shows today's tokens |
+| `tools/find_moments.py` | Gemini watches an own long video (360p proxy, once, cached) and lists Short-sized tip moments; `--make-manifests` writes drafts with `ready_to_publish` false |
+| `tools/gemini_copy.py` | One Gemini call writes YouTube, Instagram, TikTok, Threads and Community copy for a manifest; `--apply` merges it if the rights gate passes |
+| `tools/make_thumbnail.py` | Best frame (Gemini picks, sharpness fallback) + brand headline: `out/thumbs/<id>-yt.jpg` 1280x720 and `<id>-cover.jpg` 1080x1920; `--critique` |
 | `.claude/skills/gemini/` | `/gemini <task>` quick access to `gemini_task.py` |
 | `.env.example` | Names of the `.env` keys (no values); copy to `.env` |
 | `tools/` (others) | Instagram publisher, slot picker, budget check |

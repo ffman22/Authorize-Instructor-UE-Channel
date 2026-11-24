@@ -1,0 +1,28 @@
+{
+  "description": "Animation curves often lose their precision when blending in Unreal Engine montages. This tutorial demonstrates how to use a metadata curve to divide your animation values, ensuring they remain exact for additive corrections and IK until the montage ends.",
+  "first_comment": "Have you found a different way to lock curve values during blending, or does the metadata approach work for your pipeline?",
+  "instagram": "Stop your animation curves from being ruined by montage blending. Dividing the curve by a metadata curve keeps the values exact for additive work. How do you handle IK corrections in your montages? #unrealengine #ue5 #gamedev #animation #technicalart #animationtips",
+  "tiktok": "Stop your animation curves from being ruined by montage blending. Dividing the curve by a metadata curve keeps the values exact. How do you handle IK? #unrealengine #ue5 #gamedev #animation",
+  "threads": "If you've struggled with animation curves losing precision when blending in montages, try dividing the curve by a metadata curve. It keeps the values exact until the montage finishes, which is a cleaner way to handle additive corrections and IK. Are you using metadata curves for anything else in your projects? #unrealengine",
+  "community": "Montage blending is often the culprit when your animation curves stop behaving as expected. By dividing the curve by a metadata curve, you can force the values to remain exact for additive corrections or IK until the blend finishes. I've broken down the workflow in my latest video. Do you typically use animation curves for additive work, or do you prefer using transformation offsets? Check the link in my bio/pinned comment to see the method in action.",
+  "hashtags": [
+    "#unrealengine",
+    "#ue5",
+    "#gamedev",
+    "#animation",
+    "#technicalart"
+  ],
+  "tags": [
+    "unreal engine animation",
+    "ue5 animation curves",
+    "animation montage blending",
+    "ue5 metadata curve",
+    "additive animation corrections",
+    "unreal engine ik",
+    "game animation tutorial",
+    "ue5 animation blueprint",
+    "unreal engine workflow",
+    "animation curves unreal",
+    "lead animator tips"
+  ]
+}

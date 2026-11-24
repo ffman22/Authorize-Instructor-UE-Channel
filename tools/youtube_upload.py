@@ -15,7 +15,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import rights_gate  # noqa: E402
-from publish_common import (norm_hashtags, resolve_video, video_id, with_hashtags,  # noqa: E402
+from publish_common import (norm_hashtags, not_ready, resolve_video, video_id, with_hashtags,  # noqa: E402
                             write_published)
 
 REPO_ROOT = rights_gate.REPO_ROOT
@@ -206,6 +206,9 @@ def main(argv=None):
     long_video = is_long(manifest, args.long)
     body, first_comment, errors = build_request(manifest, long_video)
     warnings = []
+    draft = not_ready(manifest)
+    if draft:
+        (warnings if args.dry_run else errors).append(draft)
     if not video.is_file():
         errors.append(f"video: not found: {video}")
     elif video.stat().st_size == 0:

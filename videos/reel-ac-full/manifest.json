@@ -28,5 +28,6 @@
   "ig_caption": "",
   "video_file": "data/clips/reel-ac-shadows-awaji.mp4",
   "privacy": "private",
-  "publish_at": "2026-11-29T21:00:00Z"
+  "publish_at": "2026-11-29T21:00:00Z",
+  "ready_to_publish": true
 }

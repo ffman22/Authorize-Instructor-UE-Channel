@@ -18,6 +18,14 @@ def resolve_video(manifest, manifest_path, cli_value=None):
     return p if p.is_absolute() else REPO_ROOT / p
 
 
+def not_ready(manifest):
+    """Return an error string unless the manifest says ready_to_publish: true, else None."""
+    if manifest.get("ready_to_publish") is True:
+        return None
+    return ("ready_to_publish is not true: review the manifest, then set \"ready_to_publish\": true "
+            "(drafts never upload)")
+
+
 def norm_hashtags(manifest):
     out = []
     for h in manifest.get("hashtags") or []:

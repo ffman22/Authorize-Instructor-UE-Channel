@@ -133,9 +133,12 @@ def check(manifest, check_files=False, manifest_path=None):
     tags = manifest.get("tags", [])
     if not isinstance(tags, list) or not all(isinstance(t, str) and t.strip() for t in tags):
         errors.append("tags: must be a list of non-empty strings")
-    for key in ("ig_caption", "first_comment", "video_file", "publish_at", "description", "topic"):
+    for key in ("ig_caption", "tiktok_caption", "threads_post", "community_post", "first_comment", "video_file", "publish_at", "description", "topic"):
         if key in manifest and not isinstance(manifest[key], str):
             errors.append(f"{key}: must be a string")
+
+    if "ready_to_publish" in manifest and not isinstance(manifest["ready_to_publish"], bool):
+        errors.append("ready_to_publish: must be true or false")
 
     # Every video points to the workshop: link in the description, or a burned-in cta card.
     if WORKSHOP_URL not in str(manifest.get("description") or "") and not manifest.get("cta"):

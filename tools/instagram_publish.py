@@ -19,7 +19,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import rights_gate  # noqa: E402
-from publish_common import (norm_hashtags, resolve_video, video_id, with_hashtags,  # noqa: E402
+from publish_common import (norm_hashtags, not_ready, resolve_video, video_id, with_hashtags,  # noqa: E402
                             write_published)
 
 GRAPH_VERSION = "v24.0"
@@ -113,6 +113,9 @@ def main(argv=None):
         print(f"INSTAGRAM REFUSED {args.manifest}: rights gate failed")
         return 1
     errors, warnings = [], []
+    draft = not_ready(manifest)
+    if draft:
+        (warnings if args.dry_run else errors).append(draft)
     caption = build_caption(manifest)
     first_comment = str(manifest.get("first_comment") or "").strip()
     if len(caption) > MAX_CAPTION:
