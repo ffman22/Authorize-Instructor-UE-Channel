@@ -6,9 +6,27 @@
           {
             "type": "command",
             "command": "sed -n '/^## Checkpoint/,/^## [^C]/p' docs/handoff.md | head -15"
+          },
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/install-mods.mjs\"",
+            "timeout": 300
           }
         ]
       }
     ]
+  },
+  "enabledPlugins": {
+    "session-reset@project-kit": true,
+    "model-router@project-kit": true,
+    "task-tracker@project-kit": true
+  },
+  "extraKnownMarketplaces": {
+    "project-kit": {
+      "source": {
+        "source": "github",
+        "repo": "ffman22/claude-project-kit"
+      }
+    }
   }
 }

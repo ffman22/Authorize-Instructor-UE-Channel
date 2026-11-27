@@ -1,0 +1,39 @@
+{
+  "projectName": "Unreal Shorts studio",
+  "profile": "content-channel",
+  "chatLanguage": "Spanish",
+  "docsLanguage": "English",
+  "mainBranch": "main",
+  "sessionReset": {
+    "uiLanguage": "es",
+    "handoff": "docs/handoff.md",
+    "decisions": "docs/decisions.md",
+    "checks": [
+      "python3 tools/context_budget.py --strict (must exit 0; fix what it reports)"
+    ],
+    "pushRule": "commit with an English message and push to main; stage only this session's files; never commit .env, token.json, client_secret.json or any media file (video, images, audio, PSD, exports live on Google Drive); never push anything that uploads, schedules or makes a video public without the owner's approval (tools/approval.py check) and \"publica\"",
+    "recapSteps": [
+      "git pull --rebase; update {handoff} (overwrite its Checkpoint block, under 12 lines, each line under 40 words: only what is pending (next step, owner approvals, open questions, blockers); decisions go to {decisions}, never to the checkpoint); add new rows to {decisions}; update CLAUDE.md, README.md and the rules or skills this session changed (a gotcha that came back goes to CLAUDE.md \"Gotchas\"); record new files in the README.md map and new tools in docs/tools.md;",
+      "if clips, videos or uploads changed, list their status (video id, rights, approval, privacy, slot) in the checkpoint;",
+      "run {checks}; {pushRule}."
+    ],
+    "restartPrompt": "The conversation was cleared after the recap. Use the session start context (CLAUDE.md and the {handoff} checkpoint are already loaded); read nothing else now, unless the checkpoint is missing (then the Checkpoint block of {handoff}). Then summarize in {chatLanguage}, in 3 to 5 lines, where the work stands and what comes next, and wait for the task. Before the first edit of a task, grep {decisions} for its keywords.",
+    "commandsTitle": "Comandos del proyecto (mods project-kit):",
+    "commandsDoc": "docs/tools.md",
+    "commands": {
+      "useful": [
+        { "name": "daily-run", "text": "el ciclo diario completo de un Short" },
+        { "name": "make-video", "text": "renderiza un Short desde su manifiesto (con filtro de derechos)" },
+        { "name": "publish", "text": "copy y subida privada o programada a YouTube e Instagram" },
+        { "name": "gemini", "text": "pasa una tarea de texto mecánica a Gemini" },
+        { "name": "code-review", "text": "revisar el código cambiado" },
+        { "name": "simplify", "text": "limpiar el código cambiado" },
+        { "name": "loop", "text": "repetir una tarea cada cierto tiempo" },
+        { "name": "compact", "text": "resume la conversación sin limpiarla" },
+        { "name": "effort", "text": "esfuerzo de la sesión a mano: /effort low | medium | high | xhigh | max | auto (mantiene la caché; no es /esfuerzo)" },
+        { "name": "model", "text": "cambiar de modelo (rompe la caché: mejor delegar en un agente)" },
+        { "name": "help", "text": "ayuda de Claude Code" }
+      ]
+    }
+  }
+}
