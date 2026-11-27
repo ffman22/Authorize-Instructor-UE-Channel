@@ -8,11 +8,11 @@
     "file": "data/clips/promo-workshop-v2.mov"
   },
   "start": 101.3,
-  "duration": 28.5,
-  "rights": "own",
-  "proof": "",
+  "duration": 28.3,
+  "rights": "permission",
+  "proof": "Owner statement 2026-11-27: Carlo Andrei Mercado is an iAnimate.net instructor and may use parts of the iAnimate channel promo video to advertise their own workshop.",
   "credit": "",
-  "description": "Animator, game developer or aiming at technical animation? No previous experience needed. Join the beginner level workshop.\n\nWorkshop: https://ianimate.net/workshops/unreal-for-animators\niAnimate on YouTube: https://www.youtube.com/@iAnimateWS",
+  "description": "Unreal for Animators workshop at iAnimate: https://ianimate.net/workshops/unreal-for-animators\n\nAnimator, game developer or aiming at technical animation? No previous experience needed. Join the beginner level workshop.\n\nWorkshop: https://ianimate.net/workshops/unreal-for-animators\niAnimate on YouTube: https://www.youtube.com/@iAnimateWS",
   "hashtags": [
     "#unrealengine",
     "#ue5",
@@ -20,10 +20,16 @@
     "#animation",
     "#gamedev"
   ],
+  "tags": [
+    "unreal engine for beginner animators",
+    "unreal animation course beginners",
+    "unreal for animators workshop"
+  ],
   "first_comment": "Workshop details and enrollment: https://ianimate.net/workshops/unreal-for-animators",
   "ig_caption": "No experience needed: Unreal for Animators\nWorkshop: ianimate.net/workshops/unreal-for-animators #unrealengine #ue5 #gameanimation",
+  "cta": {"type": "workshop"},
   "video_file": "",
   "privacy": "private",
-  "publish_at": "2026-12-01T21:00:00Z",
+  "publish_at": "",
   "ready_to_publish": true
 }

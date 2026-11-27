@@ -4,7 +4,8 @@
 Usage: youtube_upload.py --auth
        youtube_upload.py <manifest.json> [--video out/<id>.mp4] [--long] [--dry-run]
 Video: --video, else manifest "video_file", else out/<id>.mp4.
-Shorts get "#shorts" in the title; --long (or manifest "format": "long") skips it.
+Titles carry no hashtags; the first 3 manifest hashtags go at the end of the description.
+A real upload needs the owner's approval (tools/approval.py) and videos/<id>/spec.json.
 Credentials: client_secret.json -> token.json at the repo root (never printed).
 """
 import argparse
@@ -14,6 +15,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import approval  # noqa: E402
 import rights_gate  # noqa: E402
 from publish_common import (norm_hashtags, not_ready, resolve_video, video_id, with_hashtags,  # noqa: E402
                             write_published)
@@ -27,6 +29,7 @@ SCOPES = [
 ]
 CATEGORY_ID = "24"  # Entertainment
 MAX_TITLE, MAX_DESC, MAX_TAGS_CHARS = 100, 5000, 500
+MAX_DESC_HASHTAGS = 3
 AUDIT_HINT = ("The API project is not verified/audited for this call. See docs/setup_checklist.md "
               "item q-yt-audit (request the YouTube API compliance audit, or upload manually meanwhile).")
 
@@ -35,40 +38,43 @@ def is_long(manifest, cli_long=False):
     return cli_long or str(manifest.get("format") or "short").strip().lower() == "long"
 
 
-def build_title(manifest, long_video=False):
-    title = " ".join(str(manifest.get("title") or "").split())
-    if long_video:
-        return title[:MAX_TITLE]
-    suffix = " #shorts"
-    if "#shorts" in title.lower():
-        return title[:MAX_TITLE]
-    return title[:MAX_TITLE - len(suffix)].rstrip() + suffix
+def build_title(manifest):
+    return " ".join(str(manifest.get("title") or "").split())[:MAX_TITLE]
 
 
 TAGS_BASE = Path(__file__).resolve().parent / "tags_base.json"
 
 
-def base_tags(manifest, long_video=False):
-    """Extra tags: manifest "tags", then topic, format and channel tags from tags_base.json."""
+def base_tags(manifest):
+    """Return (specific, broad): manifest "tags" + niche tags, and the broad tags, from tags_base.json."""
     base = {}
     if TAGS_BASE.is_file():
         base = json.loads(TAGS_BASE.read_text(encoding="utf-8"))
     topic = str(manifest.get("topic") or "").strip().lower()
-    topics = {k.lower(): v for k, v in (base.get("topics") or {}).items()}
-    fmt = "long" if long_video else "short"
-    return (list(manifest.get("tags") or []) + topics.get(topic, [])
-            + (base.get("formats") or {}).get(fmt, []) + base.get("channel", []))
+    niche, broad = base.get("niche") or {}, base.get("broad") or {}
+    topics = {k.lower(): v for k, v in (niche.get("topics") or {}).items()}
+    reel = topic in {t.lower() for t in base.get("reel_topics") or []}
+    specific = (list(manifest.get("tags") or []) + topics.get(topic, [])
+                + ([] if reel else niche.get("unreal", [])) + niche.get("common", []))
+    return specific, broad.get("all", []) + ([] if reel else broad.get("tutorial", []))
 
 
-def build_tags(hashtags, extra=()):
-    tags, seen, total = [], set(), 0
-    for h in list(hashtags) + list(extra):
-        t = str(h).strip().lstrip("#").lower()
-        cost = len(t) + (2 if " " in t else 0) + (1 if tags else 0)
-        if t and t not in seen and total + cost <= MAX_TAGS_CHARS:
-            tags.append(t)
-            seen.add(t)
-            total += cost
+def tag_cost(tag):
+    """Characters a tag uses in YouTube's limit: quotes around spaces, plus the separating comma."""
+    return len(tag) + (2 if " " in tag else 0) + 1
+
+
+def build_tags(hashtags, specific=(), broad=()):
+    """Manifest tags and niche (specific), hashtags, then broad; room for broad is reserved first."""
+    tags, seen, total = [], set(), -1  # the first tag has no comma
+    reserved = sum(tag_cost(str(b).lower()) for b in broad)
+    for group, limit in (([*specific, *hashtags], MAX_TAGS_CHARS - reserved), (broad, MAX_TAGS_CHARS)):
+        for raw in group:
+            t = str(raw).strip().lstrip("#").lower()
+            if t and t not in seen and total + tag_cost(t) <= limit:
+                tags.append(t)
+                seen.add(t)
+                total += tag_cost(t)
     return tags
 
 
@@ -85,19 +91,15 @@ def parse_publish_at(value):
 def build_request(manifest, long_video=False):
     """Return (body, first_comment, errors)."""
     errors = []
-    tags = norm_hashtags(manifest)
-    if long_video:
-        tags = [t for t in tags if t.lower() != "#shorts"]
-    desc = with_hashtags(manifest.get("description", ""), tags)
+    tags = [t for t in norm_hashtags(manifest) if t.lower() != "#shorts"]
+    desc = with_hashtags(manifest.get("description", ""), tags[:MAX_DESC_HASHTAGS])
     if len(desc) > MAX_DESC:
         errors.append(f"description: {len(desc)} chars, max {MAX_DESC}")
     if "<" in desc or ">" in desc:
         errors.append("description: YouTube rejects '<' and '>'")
-    title = build_title(manifest, long_video)
-    if not title.replace("#shorts", "").strip():
+    title = build_title(manifest)
+    if not title:
         errors.append("title: empty")
-    if long_video and "#shorts" in title.lower():
-        errors.append("title: contains #shorts but the upload is a long video")
     privacy = str(manifest.get("privacy") or "private").strip()
     status = {"privacyStatus": privacy, "selfDeclaredMadeForKids": False}
     publish_at = str(manifest.get("publish_at") or "").strip()
@@ -108,7 +110,7 @@ def build_request(manifest, long_video=False):
         except ValueError as e:
             errors.append(f"publish_at: {e}")
     body = {
-        "snippet": {"title": title, "description": desc, "tags": build_tags(tags, base_tags(manifest, long_video)),
+        "snippet": {"title": title, "description": desc, "tags": build_tags(tags, *base_tags(manifest)),
                     "categoryId": CATEGORY_ID},
         "status": status,
     }
@@ -183,7 +185,7 @@ def main(argv=None):
     ap.add_argument("manifest", nargs="?", help="path to videos/<id>/manifest.json")
     ap.add_argument("--video", help="MP4 to upload (default: manifest video_file, else out/<id>.mp4)")
     ap.add_argument("--auth", action="store_true", help="run the OAuth consent flow and save token.json")
-    ap.add_argument("--long", action="store_true", help="long video: no #shorts in title or tags (also manifest format: long)")
+    ap.add_argument("--long", action="store_true", help="upload as a long video (also manifest format: long)")
     ap.add_argument("--dry-run", action="store_true", help="validate everything, no network")
     args = ap.parse_args(argv)
 
@@ -209,12 +211,20 @@ def main(argv=None):
     draft = not_ready(manifest)
     if draft:
         (warnings if args.dry_run else errors).append(draft)
+    source = rights_gate.source_file(manifest)
+    if not source or not rights_gate.resolve_clip_path(source, args.manifest).is_file():
+        errors.append("source.file: local source required to verify HD")
+    if video.is_file() and video.stat().st_size and rights_gate.hd_error(video):
+        errors.append(f"video: {rights_gate.hd_error(video)}")
     if not video.is_file():
         errors.append(f"video: not found: {video}")
     elif video.stat().st_size == 0:
         errors.append(f"video: empty file: {video}")
     if body["status"]["privacyStatus"] == "public":
         warnings.append("privacy public: the video goes live immediately")
+    vid_id = video_id(manifest, args.manifest)
+    gate = approval.spec_errors(args.manifest) + approval.check(vid_id, video)
+    (warnings if args.dry_run else errors).extend(gate)
     if not TOKEN.is_file():
         (warnings if args.dry_run else errors).append("token.json missing: run --auth")
         if not CLIENT_SECRET.is_file():

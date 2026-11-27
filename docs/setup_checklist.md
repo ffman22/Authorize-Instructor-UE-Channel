@@ -24,6 +24,15 @@ Mark each item when done. ⏳ = waiting on the owner.
 - Instagram has no scheduling in the API: `publish_at` is ignored there, so the scheduled daily task must run at the slot time to post the Reel. YouTube schedules natively.
 - Check `GRAPH_VERSION` in `tools/instagram_publish.py` against Meta's current stable version. YouTube may refuse the first comment while a video is private or scheduled; the error is logged in `published.json` as `first_comment_error`.
 
+## 3b. YouTube Studio and accounts (research rules)
+- ⏳ Settings > Channel > Advanced: audience "No, it's not made for kids".
+- ⏳ Turn on automatic dubbing.
+- ⏳ Daily genuine engagement for 2-3 weeks on the new accounts (owner only).
+- ⏳ Append `?sub_confirmation=1` to external links that point to the YouTube channel.
+
+## 3c. Drive sync
+- ⏳ Install Google Drive for Desktop and sign in with the channel account, so renders, thumbnails and analysis files reach Drive without manual uploads.
+
 ## 4. Scheduling
 - ⏳ After one manual video works end to end, create a daily scheduled task in Claude that runs `/daily-run`.
 

@@ -10,6 +10,7 @@ import argparse
 import datetime as dt
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -64,6 +65,24 @@ def source_file(manifest):
 WORKSHOP_URL = "https://ianimate.net/workshops/unreal-for-animators"
 
 
+MIN_HD_SHORT_SIDE = 720  # channel rule: HD (720p) or higher only
+
+
+def hd_error(path):
+    """Return None if the video at path is HD or higher, else the reason. Unreadable files fail."""
+    try:
+        out = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
+                              "stream=width,height", "-of", "json", str(path)],
+                             capture_output=True, text=True, timeout=60)
+        stream = json.loads(out.stdout)["streams"][0]
+        w, h = int(stream["width"]), int(stream["height"])
+    except (OSError, subprocess.SubprocessError, ValueError, KeyError, IndexError):
+        return f"resolution unreadable, HD not verified: {path}"
+    if min(w, h) < MIN_HD_SHORT_SIDE:
+        return f"{w}x{h} is below HD ({MIN_HD_SHORT_SIDE}p); get the original HD export: {Path(path).name}"
+    return None
+
+
 def check(manifest, check_files=False, manifest_path=None):
     """Return (errors, warnings) for a manifest dict."""
     errors, warnings = [], []
@@ -81,6 +100,9 @@ def check(manifest, check_files=False, manifest_path=None):
     elif len(title.strip()) > max_title:
         errors.append(f"title: {len(title.strip())} chars, max {max_title}")
 
+    if isinstance(title, str) and re.search(r"#\w", title):
+        errors.append("title: no hashtags in titles (docs/research_rules.md)")
+
     # Source: one video of the owner (or cleared), on Drive and/or local under data/clips/.
     src = manifest.get("source")
     if not isinstance(src, dict):
@@ -95,6 +117,12 @@ def check(manifest, check_files=False, manifest_path=None):
             errors.append("source.file: a local file is needed to render (download the Drive file to data/clips/)")
         elif local and not resolve_clip_path(local, manifest_path).is_file():
             errors.append(f"source.file: not found: {local}")
+
+    # HD: checked on the source, because a Short render is 1080x1920 even from a low-res source.
+    if local and resolve_clip_path(local, manifest_path).is_file():
+        low = hd_error(resolve_clip_path(local, manifest_path))
+        if low:
+            errors.append(f"source.file: {low}")
 
     # Rights: the gate itself.
     rights = str(manifest.get("rights", "")).strip()
@@ -141,7 +169,7 @@ def check(manifest, check_files=False, manifest_path=None):
         errors.append("ready_to_publish: must be true or false")
 
     # Every video points to the workshop: link in the description, or a burned-in cta card.
-    if WORKSHOP_URL not in str(manifest.get("description") or "") and not manifest.get("cta"):
+    if WORKSHOP_URL not in str(manifest.get("description") or "") and (not manifest.get("cta") or "type" in (manifest["cta"] if isinstance(manifest["cta"], dict) else {})):
         errors.append(f"description: must include the workshop link {WORKSHOP_URL} (or set cta)")
 
     # Privacy: private, or scheduled with publish_at.

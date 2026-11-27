@@ -1,90 +1,21 @@
 {
-  "_note": "Base YouTube tags (the hidden Studio tags, not hashtags). youtube_upload.py builds: manifest hashtags, then manifest tags, then topic, format and channel tags below. Deduplicated, max 500 characters in total. Scores seen in vidIQ 23 Nov 2026: strong = animation 76, unreal engine 5 tutorial 72, gamedev 67, animation montage unreal 64, animation blueprint ue5 61, ue5 59; weak but kept for workshop = unreal for animators 24, unreal engine for animators 30. Also: tutorial 66, tips 58, workshop 55 (owner read 23 Nov 2026). Low-scoring tags (gameanimation, unreal for animators, unreal engine for animators, animation blueprint unreal, animation sequencer ue5) stay on all animation content: they match what the videos show.",
-  "channel": [
-    "animation",
-    "gameanimation",
-    "gamedev",
-    "ue5",
-    "unrealengine",
-    "unreal engine 5",
-    "unreal engine",
-    "game developer",
-    "game animation",
-    "3d animation"
-  ],
-  "formats": {
-    "short": [],
-    "long": []
+  "_note": "YouTube tags (hidden Studio tags) in three categories. 1) post: manifest \"tags\", phrases that describe that video. 2) niche: topic list here, then unreal, then common. 3) broad: reach phrases, always kept (space is reserved inside the 500-character limit; if it overflows, the last niche tags drop). Reel topics skip niche.unreal and broad.tutorial: those reels are not Unreal tutorials. vidIQ scores 23 Nov 2026: strong = animation 76, unreal engine 5 tutorial 72, gamedev 67, animation montage unreal 64, animation blueprint ue5 61, ue5 59; weak but kept = unreal for animators 24, unreal engine for animators 30. Also: tutorial 66, tips 58, workshop 55. Broad list is the owner's (26 Nov 2026), not scored.",
+  "niche": {
+    "topics": {
+      "Animation": ["unreal engine 5", "game dev", "game animation", "aaa dev", "ue5 gameplay animation", "animation blueprints", "animation sequence", "animation montage", "technical animation", "animation", "gamedev", "ue5", "unreal engine 5 tutorial", "animation montage unreal", "animation blueprint ue5", "ue5 tutorial", "animation blueprint unreal", "animation sequencer ue5", "unreal for animators", "unreal engine for animators", "animation system", "locomotion system", "tutorial", "tips"],
+      "Lighting": ["unreal engine lighting", "ue5 lumen", "lumen", "light leaks", "tutorial", "tips"],
+      "Materials": ["unreal engine materials", "ue5 materials", "material editor", "tutorial", "tips"],
+      "Niagara": ["unreal engine vfx", "ue5 niagara", "niagara", "tutorial", "tips"],
+      "Sequencer": ["unreal engine cinematics", "ue5 sequencer", "sequencer", "tutorial", "tips"],
+      "Reel": ["animation reel", "game animation reel", "gameplay animation", "lead gameplay animator", "animator portfolio", "technical animation"],
+      "Workshop": ["unreal for animators", "unreal engine for animators", "workshop", "unreal engine 5", "game dev", "game animation", "aaa dev", "technical animation", "animation", "gamedev", "ue5", "unreal engine 5 tutorial", "animation blueprint ue5", "unreal engine workshop", "learn unreal engine", "ue5 tutorial", "unreal authorized instructor", "ianimate", "ue5 gameplay animation", "animation montage unreal", "animation blueprint unreal", "animation sequencer ue5", "locomotion system", "tutorial"]
+    },
+    "unreal": ["unreal engine 5", "ue5", "unreal engine", "unrealengine"],
+    "common": ["animation", "game animation", "game dev", "gamedev", "aaa dev", "gameanimation", "3d animation", "game developer"]
   },
-  "topics": {
-    "Animation": [
-      "unreal engine 5 tutorial",
-      "tutorial",
-      "tips",
-      "animation montage unreal",
-      "animation blueprint ue5",
-      "ue5 tutorial",
-      "animation blueprint unreal",
-      "animation sequencer ue5",
-      "unreal for animators",
-      "unreal engine for animators",
-      "animation system",
-      "locomotion system",
-      "technical animation"
-    ],
-    "Lighting": [
-      "tutorial",
-      "tips",
-      "lumen",
-      "unreal engine lighting",
-      "ue5 lumen",
-      "light leaks"
-    ],
-    "Materials": [
-      "tutorial",
-      "tips",
-      "unreal engine materials",
-      "material editor",
-      "ue5 materials"
-    ],
-    "Niagara": [
-      "tutorial",
-      "tips",
-      "niagara",
-      "unreal engine vfx",
-      "ue5 niagara"
-    ],
-    "Sequencer": [
-      "tutorial",
-      "tips",
-      "sequencer",
-      "unreal engine cinematics",
-      "ue5 sequencer"
-    ],
-    "Reel": [
-      "animation reel",
-      "game animation reel",
-      "gameplay animation",
-      "lead gameplay animator",
-      "animator portfolio"
-    ],
-    "Workshop": [
-      "unreal engine 5 tutorial",
-      "animation blueprint ue5",
-      "ue5 tutorial",
-      "tutorial",
-      "unreal for animators",
-      "unreal engine for animators",
-      "animation blueprint unreal",
-      "animation montage unreal",
-      "animation sequencer ue5",
-      "workshop",
-      "ianimate",
-      "unreal engine workshop",
-      "unreal authorized instructor",
-      "learn unreal engine",
-      "locomotion system",
-      "technical animation"
-    ]
-  }
+  "broad": {
+    "all": ["viral", "viral video", "for you"],
+    "tutorial": ["viral tutorial", "expert tutorial", "step up your skills"]
+  },
+  "reel_topics": ["Reel"]
 }

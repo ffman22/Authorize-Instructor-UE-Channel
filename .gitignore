@@ -9,3 +9,51 @@ data/clips/*
 !data/clips/.gitkeep
 *.mp4
 *.mov
+data/voice_profiles/*
+!data/voice_profiles/.gitkeep
+
+# Media and assets live on Google Drive, never in git (docs/drive_catalog.md)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.psd
+*.webm
+*.wav
+*.mp3
+*.m4a
+*.ttf
+*.otf
+*.zip
+
+# Third-party skills fetched by the installer (pinned in installers/skills-lock.json)
+installers/.agents/
+
+# >>> project-kit (managed block: tools/kit/kit.py update rewrites it)
+# OS and editors
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+__pycache__/
+*.pyc
+# Obsidian (the repository root works as a vault)
+.obsidian/workspace*.json
+.obsidian/cache
+.trash/
+# Agents status (written by .claude/hooks/agents-status.mjs, read by the Agents Office viewer)
+.claude/agents-status.json
+.claude/agents-status.json.*
+.venv/
+.env
+.env.*
+client_secret*.json
+token*.json
+out/*
+!out/.gitkeep
+data/clips/*
+!data/clips/.gitkeep
+*.mp4
+*.mov
+# <<< project-kit

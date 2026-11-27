@@ -18,12 +18,12 @@ A clip without one of these does not render. `tools/rights_gate.py` enforces it.
 - Own footage and AI-generated clips (Higgsfield, Veo-class tools), labeled as such where the platform requires it.
 - CC-licensed archives. Keep the credit in the description.
 
-## Commentary layer
-Every clip has a `take` (one short line shown on screen) and a rank decided by the channel. Order, labels and takes are the transformative part; do not skip them.
+## Original layer
+Every video gives original technical instruction, architecture breakdown or gameplay animation analysis by the owner. Never re-upload raw third-party clips.
 
 ## Disclosure
 - Use the platform's altered/synthetic content label for AI-generated footage.
 - Put `credit` lines in the description for `cc` and `permission` clips.
 
 ## Volume
-Vary topics, formats and hooks; do not publish near-identical videos. Cadence is 1–2 per day only while each one has distinct clips and takes.
+Vary topics, formats and hooks; do not publish near-identical videos. At most 1 Short per day under 100,000 subscribers.

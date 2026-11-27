@@ -59,21 +59,31 @@ def triple(text):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--ig", default="0,0,0")
-    ap.add_argument("--tiktok", default="0,0,0")
-    ap.add_argument("--threads", default="0,0,0")
+    ap.add_argument("--ig")
+    ap.add_argument("--tiktok")
+    ap.add_argument("--threads")
     a = ap.parse_args()
+    # Platforms without OAuth keep their last known numbers unless new ones are given.
+    old = {}
+    if OUT.exists():
+        old = {x["platform"]: x for x in json.loads(OUT.read_text(encoding="utf-8")).get("accounts", [])}
+
+    def keep(name, arg):
+        if arg:
+            return triple(arg)
+        o = old.get(name, {})
+        return {"followers": o.get("followers", 0), "following": o.get("following", 0), "posts": o.get("posts", 0)}
     ch, videos = youtube()
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     data = {"generated_utc": now, "youtube": ch, "videos": videos,
             "accounts": [
                 {"platform": "YouTube", "handle": ch["title"], "followers": ch["subs"], "following": 0,
                  "posts": ch["videos"], "views": ch["views"], "source": "YouTube Data API"},
-                {"platform": "Instagram", "handle": "@carlo.animator", **triple(a.ig), "views": None,
+                {"platform": "Instagram", "handle": "@carlo.animator", **keep("Instagram", a.ig), "views": None,
                  "source": "Read in the app"},
-                {"platform": "TikTok", "handle": "@carloaninator", **triple(a.tiktok), "views": None,
+                {"platform": "TikTok", "handle": "@carloaninator", **keep("TikTok", a.tiktok), "views": None,
                  "source": "Read in the app"},
-                {"platform": "Threads", "handle": "@carlo.animator", **triple(a.threads), "views": None,
+                {"platform": "Threads", "handle": "@carlo.animator", **keep("Threads", a.threads), "views": None,
                  "source": "Read in the app"}]}
     OUT.write_text(json.dumps(data, indent=1), encoding="utf-8")
     print(f"wrote {OUT} ({len(videos)} videos)")

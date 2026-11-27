@@ -16,6 +16,7 @@ Then follow `docs/setup_checklist.md` (YouTube and Instagram access).
 | `CLAUDE.md` | Rules for Claude sessions (read first) |
 | `docs/setup_checklist.md` | One-time owner steps |
 | `docs/posting_strategy.md` | Slots, copy rules, who does what |
+| `docs/channel_audit_2026-11-27.md` | Live YouTube errors and research-doc review |
 | `docs/creator_brief.md` | Owner's standing requirements for thumbnails, audience, scripts, metrics, intro video (Gemini and Claude as manager and coach) |
 | `docs/creator_playbook.md` | Gemini-drafted playbook from the brief: thumbnail system, viewer profiles, script templates, metrics loop, intro video plan, weekly routine |
 | `docs/instagram_plan.md` | Instagram Reels and Stories plan with captions |
@@ -28,22 +29,29 @@ Then follow `docs/setup_checklist.md` (YouTube and Instagram access).
 | `docs/handoff.md` | Checkpoint |
 | `videos/_template/manifest.json` | Copy this to start a Short (one tip, one cut of one own video) |
 | `tools/rights_gate.py` | Validates a tip manifest (rights, source, cut <= 60 s, privacy); exit 0 = pass |
-| `tools/build_video.py` | Renders `out/<id>.mp4` 1080x1920 from the cut: blurred-fill fit, headline, source audio, optional `cta` end card (workshop); `--selftest` |
-| `data/brand/` | Channel watermark PNGs (150x150) and `ianimate-i.png` (the iAnimate "i" used by the cta card) |
-| `tools/youtube_upload.py` | Private/scheduled upload; `--long` or `format: long` skips `#shorts`; tags = hashtags + manifest `tags` + `tags_base.json` |
-| `tools/tags_base.json` | Base YouTube tags by channel, format and topic (Animation, Lighting, Reel, Workshop...) |
+| `tools/build_video.py` | Renders `out/<id>.mp4` 1080x1920 from the cut: blurred-fill fit, headline, source audio, optional `cta` end card (workshop) or animated splash appended after a 1 s fade to black and silence; `--selftest` |
+| `data/brand/` | Local brand images (ignored by git, master copies on Drive) and `thumbs.json` (cover settings) |
+| `tools/youtube_upload.py` | Private/scheduled upload after owner approval; no hashtags in titles, 3 in the description; tags = manifest `tags` + hashtags + niche and broad from `tags_base.json` |
+| `tools/approval.py` | Owner approval gate: review sheet, approval record, HD and spec checks |
+| `tools/psd_layers.py` | Reads layers of the owner's PSD templates |
+| `docs/research_rules.md` | Adopted rules from the social media research (Drive docs 01-08) |
+| `tools/tags_base.json` | YouTube niche tags (by topic, Unreal, common) and broad tags; post-specific tags live in each manifest |
 | `tools/gemini_client.py` | Shared Gemini client: text, images, video (Files API), JSON mode; cache in `out/gemini/cache/`, token log `out/gemini/usage.jsonl`, daily cap `GEMINI_DAILY_TOKENS` |
 | `tools/gemini_task.py` | Sends a text task (+ optional `--file`) to Gemini; refuses credential files; `--usage` shows today's tokens |
 | `tools/find_moments.py` | Gemini watches an own long video (360p proxy, once, cached) and lists Short-sized tip moments; `--make-manifests` writes drafts with `ready_to_publish` false |
 | `tools/gemini_copy.py` | One Gemini call writes YouTube, Instagram, TikTok, Threads and Community copy for a manifest; `--apply` merges it if the rights gate passes |
 | `tools/make_thumbnail.py` | Best frame (Gemini picks, sharpness fallback) + brand headline: `out/thumbs/<id>-yt.jpg` 1280x720 and `<id>-cover.jpg` 1080x1920; `--critique` |
+| `tools/channel_thumbs.py` | Covers from a video frame or the owner's template art (settings in `data/brand/thumbs.json`); Shorts use the template positions; `--set` uploads only owner-approved ones |
 | `tools/social_stats.py` | Pulls YouTube channel and video stats via the Data API into `data/social_stats.json`; `--ig/--tiktok/--threads followers,following,posts` add the other accounts. Feeds the Social Tracker artifact |
 | `.claude/skills/gemini/` | `/gemini <task>` quick access to `gemini_task.py` |
 | `.env.example` | Names of the `.env` keys (no values); copy to `.env` |
 | `installers/Instalar_Estudio_Voz_y_HyperFrames.bat` | Owner-run menu: local voice studio (Voicebox, CUDA) and HyperFrames Studio + skills for Claude and Gemini |
 | `data/voice_profiles/` | Owner's voice samples for Voicebox cloning (WAV 48 kHz, 24 bit, mono); contents git-ignored, own voice only |
 | `tools/` (others) | Instagram publisher, slot picker, budget check |
-| `.claude/` | Agents, skills (`make-video`, `publish`, `daily-run`) and rules |
+| `.claude/` | Agents, skills (`make-video`, `publish`, `daily-run`) and rules; `kit.json` (mod settings), `kit.lock.json` (installed kit version), kit hooks and `kit-*` skills |
+| `tools/kit/` | Project kit (github.com/ffman22/claude-project-kit): `kit.py status` / `update`; managed, do not edit |
+| `tools/agents-office/` | Live view of agents: `/agentes-office` or double-click `open-office.cmd` |
+| `.gitattributes` | Line endings (project kit block) |
 
 ## Quick use
 ```

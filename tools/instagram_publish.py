@@ -18,6 +18,7 @@ import urllib.request
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import approval  # noqa: E402
 import rights_gate  # noqa: E402
 from publish_common import (norm_hashtags, not_ready, resolve_video, video_id, with_hashtags,  # noqa: E402
                             write_published)
@@ -26,7 +27,7 @@ GRAPH_VERSION = "v24.0"
 GRAPH = f"https://graph.facebook.com/{GRAPH_VERSION}"
 REPO_ROOT = rights_gate.REPO_ROOT
 POLL_TIMEOUT_S, POLL_EVERY_S = 300, 10
-MAX_CAPTION, MAX_HASHTAGS = 2200, 30
+MAX_CAPTION, MAX_HASHTAGS = 2200, 5
 
 
 def load_env():
@@ -127,7 +128,10 @@ def main(argv=None):
         errors.append("video-url: must be a public https:// URL")
     local = resolve_video(manifest, args.manifest, args.video)
     if not local.is_file():
-        warnings.append(f"local video not found: {local} (the URL must still serve the final MP4)")
+        errors.append(f"local video not found: {local} (needed to verify HD and the owner's approval)")
+    vid_id = video_id(manifest, args.manifest)
+    gate = approval.spec_errors(args.manifest) + approval.media_errors(manifest, vid_id, local) + approval.check(vid_id, local)
+    (warnings if args.dry_run else errors).extend(gate)
     creds = load_env()
     missing = [k for k, v in creds.items() if not v]
     if missing:

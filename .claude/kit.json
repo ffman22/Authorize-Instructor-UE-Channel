@@ -22,18 +22,52 @@
     "commandsDoc": "docs/tools.md",
     "commands": {
       "useful": [
-        { "name": "daily-run", "text": "el ciclo diario completo de un Short" },
-        { "name": "make-video", "text": "renderiza un Short desde su manifiesto (con filtro de derechos)" },
-        { "name": "publish", "text": "copy y subida privada o programada a YouTube e Instagram" },
-        { "name": "gemini", "text": "pasa una tarea de texto mecánica a Gemini" },
-        { "name": "code-review", "text": "revisar el código cambiado" },
-        { "name": "simplify", "text": "limpiar el código cambiado" },
-        { "name": "loop", "text": "repetir una tarea cada cierto tiempo" },
-        { "name": "compact", "text": "resume la conversación sin limpiarla" },
-        { "name": "effort", "text": "esfuerzo de la sesión a mano: /effort low | medium | high | xhigh | max | auto (mantiene la caché; no es /esfuerzo)" },
-        { "name": "model", "text": "cambiar de modelo (rompe la caché: mejor delegar en un agente)" },
-        { "name": "help", "text": "ayuda de Claude Code" }
+        {
+          "name": "daily-run",
+          "text": "el ciclo diario completo de un Short"
+        },
+        {
+          "name": "make-video",
+          "text": "renderiza un Short desde su manifiesto (con filtro de derechos)"
+        },
+        {
+          "name": "publish",
+          "text": "copy y subida privada o programada a YouTube e Instagram"
+        },
+        {
+          "name": "gemini",
+          "text": "pasa una tarea de texto mecánica a Gemini"
+        },
+        {
+          "name": "code-review",
+          "text": "revisar el código cambiado"
+        },
+        {
+          "name": "simplify",
+          "text": "limpiar el código cambiado"
+        },
+        {
+          "name": "loop",
+          "text": "repetir una tarea cada cierto tiempo"
+        },
+        {
+          "name": "compact",
+          "text": "resume la conversación sin limpiarla"
+        },
+        {
+          "name": "effort",
+          "text": "esfuerzo de la sesión a mano: /effort low | medium | high | xhigh | max | auto (mantiene la caché; no es /esfuerzo)"
+        },
+        {
+          "name": "model",
+          "text": "cambiar de modelo (rompe la caché: mejor delegar en un agente)"
+        },
+        {
+          "name": "help",
+          "text": "ayuda de Claude Code"
+        }
       ]
     }
-  }
+  },
+  "kitSource": "https://github.com/ffman22/claude-project-kit"
 }

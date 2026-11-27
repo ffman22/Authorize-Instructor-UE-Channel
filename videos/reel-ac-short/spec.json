@@ -1,0 +1,23 @@
+{
+  "engine_and_version": "Anvil (Assassin's Creed Shadows: Claws of Awaji), per docs/research_rules.md; version not stated",
+  "core_technical_thesis": "Animation reel: the owner's gameplay animation work on AC Shadows: Claws of Awaji",
+  "shown_in_video": [
+    "actor direction - animation",
+    "hit reactions and approach locomotion animation and implementation for the bo master",
+    "final implementation polish and adjustments on other animators' work (credited on screen)"
+  ],
+  "not_in_video": [
+    "Unreal Engine footage",
+    "a tutorial or step-by-step technique"
+  ],
+  "verified_timestamps": {
+    "source 10.0 s": "caption: Actor direction - animation",
+    "source 20.0 s": "caption: hit reactions, approach locomotion, bo master",
+    "source 27.75 s": "caption: Animation by Raghava Krishna, polish by the owner",
+    "source 54.0 s": "caption: Animation by Jonathan Locci, polish by the owner"
+  },
+  "candidate_thumbnail_timestamps": [
+    10.8
+  ],
+  "owner_checked": true
+}

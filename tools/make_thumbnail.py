@@ -136,6 +136,7 @@ def main(argv=None):
     ap.add_argument("manifest")
     ap.add_argument("--frames", type=int, default=6, help="candidate frames (default 6)")
     ap.add_argument("--no-gemini", action="store_true", help="pick the sharpest frame locally")
+    ap.add_argument("--at", help="use the frame at this time of the Short (m:ss or seconds) instead of picking one")
     ap.add_argument("--critique", action="store_true", help="ask Gemini to score the 16:9 result")
     args = ap.parse_args(argv)
 
@@ -148,12 +149,18 @@ def main(argv=None):
     try:
         with tempfile.TemporaryDirectory() as tmp:
             frames = []
-            for i, t in enumerate(sample_times(manifest, src, args.frames)):
+            times = sample_times(manifest, src, args.frames)
+            if args.at:
+                at = rights_gate.parse_seconds(args.at)
+                if str(manifest.get("format") or "short") == "short":
+                    at += rights_gate.parse_seconds(manifest.get("start", 0))
+                times = [at]
+            for i, t in enumerate(times):
                 f = Path(tmp) / f"f{i}.jpg"
                 grab(src, t, f)
                 frames.append(Image.open(f).convert("RGB"))
-            best, why = max(range(len(frames)), key=lambda i: sharpness(frames[i])), "sharpest"
-            if not args.no_gemini:
+            best, why = max(range(len(frames)), key=lambda i: sharpness(frames[i])), "sharpest" if not args.at else "chosen by owner"
+            if not args.no_gemini and not args.at:
                 try:
                     best, why = pick_with_gemini(frames)
                 except (gc.GeminiError, KeyError, ValueError) as e:

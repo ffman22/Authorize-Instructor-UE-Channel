@@ -1,0 +1,19 @@
+{
+  "engine_and_version": "Unreal Engine (version not stated in the video)",
+  "core_technical_thesis": "Ad for the Unreal for Animators workshop at iAnimate",
+  "shown_in_video": [
+    "courses teach visuals; this workshop teaches systems",
+    "who the workshop is for"
+  ],
+  "not_in_video": [
+    "a tutorial or step-by-step technique",
+    "a stated engine version"
+  ],
+  "verified_timestamps": {
+    "source 0 to 25.15 s": "Cut ends after 'you always hit a wall' (local transcript)"
+  },
+  "candidate_thumbnail_timestamps": [
+    0
+  ],
+  "owner_checked": false
+}

@@ -1,11 +1,12 @@
 {
   "youtube": {
-    "video_id": "92FbF7tYSrg",
-    "url": "https://youtube.com/shorts/92FbF7tYSrg",
+    "video_id": "VLqWpu-oKA4",
+    "url": "https://youtube.com/shorts/VLqWpu-oKA4",
     "format": "short",
     "privacy": "private",
-    "publish_at": "2026-11-28T21:00:00.000Z",
-    "uploaded_at": "2026-11-23T13:16:17Z",
-    "file": "D:\\Projects\\Authorize-Instructor-UE-Channel\\out\\reel-ac-short.mp4"
+    "publish_at": "2026-11-28T17:00:00.000Z",
+    "uploaded_at": "2026-11-27T17:05:26Z",
+    "file": "D:\\Projects\\Authorize-Instructor-UE-Channel\\out\\reel-ac-short.mp4",
+    "first_comment_error": "HTTP 403 forbidden: The API project is not verified/audited for this call. See docs/setup_checklist.md item q-yt-audit (request the YouTube API compliance audit, or upload manually meanwhile)."
   }
 }

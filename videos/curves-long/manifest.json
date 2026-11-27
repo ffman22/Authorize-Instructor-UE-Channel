@@ -5,7 +5,7 @@
   "title": "Fix Animation Curve Values with Metadata Curves in Unreal Engine",
   "source": {
     "drive_file_id": "1AyJkmi_zeawJVYDfN9ACr0cI5R7nU425",
-    "file": "data/clips/animation-curves-fix.mp4"
+    "file": "data/clips/animation-curves-fix-hd.mp4"
   },
   "start": 0,
   "rights": "own",
@@ -19,17 +19,19 @@
     "#gameanimation"
   ],
   "tags": [
-    "animation curves",
-    "metadata curves",
-    "animation montage",
-    "additive animation",
-    "ik",
-    "blend in blend out"
+    "tutorial animation curve unreal",
+    "animation curve blending",
+    "unreal animation tutorial",
+    "metadata curves unreal",
+    "animation curves montage",
+    "fix animation curve values",
+    "blend in blend out curves",
+    "additive animation ik"
   ],
   "first_comment": "Questions? Ask below. Workshop: https://ianimate.net/workshops/unreal-for-animators",
   "ig_caption": "",
-  "video_file": "data/clips/animation-curves-fix.mp4",
+  "video_file": "data/clips/animation-curves-fix-hd.mp4",
   "privacy": "private",
-  "publish_at": "2026-11-25T21:00:00Z",
+  "publish_at": "",
   "ready_to_publish": true
 }

@@ -7,8 +7,8 @@ Files: `out/post-ready/tiktok/<id>.mp4` (9:16, under 10 MB) and `out/post-ready/
 ## Reels (one per day, 21:00 UTC / 22:00 Madrid, same order as TikTok)
 | # | File | Caption |
 |---|---|---|
-| 1 | curves-short.mp4 | Keep animation curves from blending in montages. Divide the curve by a metadata curve and the value stays exact until the montage ends. Which Unreal animation problem should I solve next? Full tutorial on YouTube (link in bio). #unrealengine #ue5 #animation #gamedev #technicalanimation #unrealforanimators |
-| 2 | lyra-short-web.mp4 | Lyra melee combo with early and late cancel in UE5.7. How do you handle combo cancels in your projects? Link in bio for the full video. #unrealengine #ue5 #gamedev #animation #lyra #unrealforanimators |
+| 1 | curves-short.mp4 | Keep animation curves from blending in montages. Divide the curve by a metadata curve and the value stays exact until the montage ends. Which Unreal animation problem should I solve next? Full tutorial on YouTube (link in bio). #animationcurves #ue5 #technicalanimation #gameanimation #viral |
+| 2 | lyra-short-web.mp4 | Lyra melee combo with early and late cancel in UE5.7. How do you handle combo cancels in your projects? Link in bio for the full video. #lyra #meleecombo #ue5 #gameanimation #viral |
 | 3 | reel-ac-short.mp4 | Gameplay animation for Assassin's Creed Shadows: Claws of Awaji. I was Lead Gameplay Animator on this DLC. Game footage (c) Ubisoft, shown as part of my professional reel. #assassinscreed #gameanimation #animation #gamedev #unrealengine |
 | 4 | reel-nec-short.mp4 | Keyframe cinematics in Necromunda: Hired Gun. Game footage (c) its respective owners, shown as part of my professional reel. #necromunda #keyframeanimation #animation #gamedev #cinematics |
 | 5 | workshop-promo-01.mp4 | Most animation courses stop at isolated pieces. Unreal for Animators teaches you to build the whole system. Workshop link in bio. #unrealengine #unrealforanimators #animation #gamedev #ue5 |

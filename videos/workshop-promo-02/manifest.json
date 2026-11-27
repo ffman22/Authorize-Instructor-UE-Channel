@@ -8,11 +8,11 @@
     "file": "data/clips/promo-workshop-v2.mov"
   },
   "start": 31,
-  "duration": 38.5,
-  "rights": "own",
-  "proof": "",
+  "duration": 37.95,
+  "rights": "permission",
+  "proof": "Owner statement 2026-11-27: Carlo Andrei Mercado is an iAnimate.net instructor and may use parts of the iAnimate channel promo video to advertise their own workshop.",
   "credit": "",
-  "description": "Real-time animation pipelines for AAA games, from rigging to Unreal implementation. Meet your instructor, an Unreal Authorized Instructor.\n\nWorkshop: https://ianimate.net/workshops/unreal-for-animators\niAnimate on YouTube: https://www.youtube.com/@iAnimateWS",
+  "description": "Unreal for Animators workshop at iAnimate: https://ianimate.net/workshops/unreal-for-animators\n\nReal-time animation pipelines for AAA games, from rigging to Unreal implementation. Meet your instructor, an Unreal Authorized Instructor.\n\nWorkshop: https://ianimate.net/workshops/unreal-for-animators\niAnimate on YouTube: https://www.youtube.com/@iAnimateWS",
   "hashtags": [
     "#unrealengine",
     "#ue5",
@@ -20,10 +20,16 @@
     "#animation",
     "#gamedev"
   ],
+  "tags": [
+    "aaa animation pipeline",
+    "lead gameplay animator workshop",
+    "unreal for animators workshop"
+  ],
   "first_comment": "Workshop details and enrollment: https://ianimate.net/workshops/unreal-for-animators",
   "ig_caption": "Lead gameplay animator, AAA pipelines\nWorkshop: ianimate.net/workshops/unreal-for-animators #unrealengine #ue5 #gameanimation",
+  "cta": {"type": "workshop"},
   "video_file": "",
   "privacy": "private",
-  "publish_at": "2026-11-27T21:00:00Z",
+  "publish_at": "",
   "ready_to_publish": true
 }

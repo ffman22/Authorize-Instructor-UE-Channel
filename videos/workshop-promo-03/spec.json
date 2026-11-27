@@ -1,0 +1,19 @@
+{
+  "engine_and_version": "Unreal Engine (version not stated in the video)",
+  "core_technical_thesis": "Ad for the Unreal for Animators workshop at iAnimate",
+  "shown_in_video": [
+    "beginner courses show isolated features; this one connects them",
+    "animation, Blueprints and gameplay working together"
+  ],
+  "not_in_video": [
+    "a tutorial or step-by-step technique",
+    "a stated engine version"
+  ],
+  "verified_timestamps": {
+    "source 77.2 to 101.0 s": "Cut ends after 'behaves correctly in real game scenarios' (local transcript)"
+  },
+  "candidate_thumbnail_timestamps": [
+    77.2
+  ],
+  "owner_checked": false
+}

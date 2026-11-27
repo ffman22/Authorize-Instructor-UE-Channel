@@ -8,5 +8,6 @@
 | YouTube Data API v3 | Upload, schedule | ⏳ OAuth client |
 | Instagram Graph API | Publish Reels | ⏳ Meta app |
 | Claude scheduled task | Daily run | ⏳ after first manual video |
+| Project kit 0.5.0 (`tools/kit/kit.py`) | Kit hooks, mods, Agents Office (`/agentes`, `/agentes-office`) | installed 27 Nov 2026 |
 
 Network hosts: `googleapis.com`, `oauth2.googleapis.com`, `graph.facebook.com`, `graph.instagram.com`. First use of each is approved once by the owner; record it here.

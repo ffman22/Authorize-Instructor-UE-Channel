@@ -47,3 +47,38 @@
 | 24 Nov 2026 | Gemini pipeline (`gemini_client.py`, `find_moments.py`, `gemini_copy.py`, `make_thumbnail.py`). Balance plan: one lite model for all; video only as a 360p/2 fps proxy at low media resolution, once per video (cached, deleted from Google right after); copy is one call per video returning all platforms; thumbnail picks use 480 px previews; every call cached and logged, hard daily cap. Test: 4:48 video = 27k tokens, so 56 min is about 310k | Owner asked to spread Gemini work so the balance lasts |
 | 24 Nov 2026 | HyperFrames (HeyGen, Apache open source) plugin `hyperframes@hyperframes` v0.9.88 installed in Claude Code (user scope) for HTML-to-video edits. Gemini-side skill install was blocked by the permission classifier; not done | Owner asked Claude and Gemini to edit videos together with it |
 | 24 Nov 2026 | `installers/Instalar_Estudio_Voz_y_HyperFrames.bat`: owner-run menu that installs Voicebox (local voice studio) and HyperFrames Studio with skills for Claude and Gemini; not executed by Claude | Owner asked for a local voice studio and HyperFrames Studio |
+
+## 24 Nov 2026 — Social stats refresh
+- `social_stats.py` keeps previous IG/TikTok/Threads numbers unless flags are given (it used to zero them). Daily scheduled task `social-stats-daily` (09:00 local, app must be open) refreshes YouTube via API and IG/TikTok via vidIQ.
+
+## 25 Nov 2026 — HD only
+- Owner rule: only HD (720p) or higher. `rights_gate.py` probes the local source; `youtube_upload.py` also probes the upload file. The curves, Lyra and AC Shadows sources are 640x360 (their Drive copies too), so their 1080x1920 renders are upscales.
+- Thumbnails (25 Nov): frame plus two lines of text (second in yellow), watermark-150-u large, always bottom right, no large owner face for now (owner's call). `channel_thumbs.py` renders and sets them.
+| 26 Nov 2026 | Tags in three categories: post-specific (manifest `tags`), niche (`tags_base.json`, by topic) and broad (owner list, space reserved in the 500 limit). Reel topics skip Unreal and tutorial-broad tags. Instagram and TikTok: max 5 hashtags (2 specific, 2 niche, 1 broad); `instagram_publish.py` enforces 5. Live videos not updated yet | Owner asked to split tags by category; Instagram caps hashtags at 5 |
+
+## 27 Nov 2026 — Owner rules after the research audit
+- Nothing is uploaded, scheduled or changed on a platform before the owner approves it. Enforced by `tools/approval.py` (hashes of metadata, video and thumbnail) in the YouTube, Instagram and thumbnail tools. Videos scheduled earlier have no approval record.
+- Never SD.
+- Keyword `UNREALZERO` = iAnimate workshop code, workshop ads only; `UNREAL` for channel and series videos.
+- Research docs 01-08 adopted (`docs/research_rules.md`); no hashtags in titles; 3 YouTube hashtags; `spec.json` required to render and upload.
+- Vertical covers use the owner's PSD template; reference: workshop-promo-01 v2 (title cap top at 398 of 1920).
+- `Dn_iRxQiN2M` is the SD copy the owner hid. `CYHdjr9YwV0` (HD, public) is the curves long video; the owner fixed it: do not touch.
+- Media leaves git (`.gitignore` and `git rm --cached`; old commits still hold the brand images). Gemini analyses videos through Drive `8-gemini-analysis`.
+- Owner paused workshop-promo-02: YouTube schedule removed, video stays private until approved.
+- Owner approved the promo-03 cover; rejected AC Short and both Necromunda covers as blurry or badly framed. Covers use sharp, well-framed frames; `drop` in `thumbs.json` adds dark headroom so the subject sits under the title.
+- Owner approved the new Necromunda covers (full and Short) and promo-04; chose the reel frame at 10.8 s for the AC Short cover (recorded mouse cursor erased via `erase` in `thumbs.json`).
+- Owner approved the new AC Short cover.
+- Tip Shorts end with a 3.5 s full-screen splash (end placement keeps the hook and retention): "full" (watch the full video + subscribe) or "soon" (subscribe + notifications). Design awaits owner approval; no Short re-rendered yet. Owner asked for both variants to animate a cursor clicking Subscribe and then the YouTube bell, with "Turn on notifications".
+- Subscribe button follows the owner's guide GIF: white "Subscribe", pink flash with red sparks, dark "Subscribed" with bell and chevron; same size in both states. Notification bell unchanged.
+- Owner approved the YouTube splash and paused AC Short (verified: private, no date). Instagram/TikTok copies use their own splash (Follow, comment UNREAL, full video on YouTube): build_video.py --splash social_soon|social_full.
+- AC Shadows is not Unreal: never ask for `UNREAL` there. Non-Unreal footage uses `GAMEANIM` (owner offered AAAGameDev or GameAnim) and "game animation content" in the splash.
+- Workshop Shorts get their own end splash (`cta.type` "workshop", all platforms): comment UNREALZERO for more information. Design awaits approval; promos not re-rendered.
+- Owner approved GAMEANIM and the workshop splash; asked to fix the abrupt end of the Authorized Instructor Short (promo-02) and add splash sounds. Cuts end on a finished sentence; the workshop splash is appended after the cut; sounds are synthesized in build_video.py. promo-03 and 04 unscheduled.
+- Owner approved the new cuts and splash sounds ("dejalos asi"): AC Short (YouTube and social) and promos 01-04. Texts, dates and spec files are not approved yet.
+- The course promo video (`promo-workshop-v2`) is on the iAnimate.net channel, which is not the owner's. The owner, an iAnimate instructor, may use parts of it to advertise their workshop and ruled that this statement is enough proof: promos 01-04 are now `rights: permission` (rights gate passes).
+| 27 Nov 2026 | Project kit 0.5.0 installed: hooks, `kit.py`, Agents Office. Project docs and own agents kept: no `docs/pipeline/`, `docs/catalog/`, `docs/CLAUDE.md`, `docs/economics.md`, `rules/docs.md`; `kit-agents` off; `session-start.mjs` not wired (it reads `docs/pipeline/handoff.md`) | Avoids two sources of truth |
+| 27 Nov 2026 | Animated splashes never cover the cut: picture fades to black and sound to zero (1 s; `cta.fade` overrides, AC Short uses 0.6 s and ends at source 60.75 s, where its sequence ends), then the splash is appended; cut + 3.5 s must stay ≤ 60 s. AC Short (YouTube and social) re-rendered, 58.3 s, awaiting approval | Owner: the hard ending looked bad |
+| 27 Nov 2026 | Owner approved the AC Short v2 ending ("ok asi"). Texts, cover, date and spec.json not approved yet | Owner review |
+| 27 Nov 2026 | Non-Unreal keyword is now `GAMEANIMATION` (was `GAMEANIM`). Every platform carries a comment call to action. AC Short tests an 18:00 Madrid/Paris (17:00 UTC) slot instead of 22:00; Instagram caption adds workshop and iAnimate YouTube links | Owner order; reach through comments and an earlier slot |
+| 27 Nov 2026 | Owner approved the AC Short sheet ("Sí, la pruebo"). Uploaded `VLqWpu-oKA4` private, scheduled 28 Nov 17:00 UTC, cover set; verified HD 1080x1920. Old copies `92FbF7tYSrg` and `m447R2Lt3vI` stay private with no date | Approved upload; 18:00 slot test |
+| 27 Nov 2026 | Old AC Short copies `92FbF7tYSrg` and `m447R2Lt3vI` deleted from YouTube (both private, undated, 0 views); `published-sd.json` and `published-nosplash.json` stay as history. `installers/.agents/` is git-ignored | Owner order; third-party files and fonts stay out of git |

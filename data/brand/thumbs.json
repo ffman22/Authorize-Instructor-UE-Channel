@@ -1,0 +1,13 @@
+{
+  "curves-long": {"at": 49.5, "crop": [0.2, 0.09, 0.8, 0.65], "text": ["BROKEN", "CURVES?"]},
+  "curves-short": {"at": 245.4, "crop": [0.1, 0.2, 0.62, 0.9], "text": ["STOP CURVE", "BLENDING"]},
+  "lyra-short": {"at": 46.1, "crop": [0.1, 0.2, 0.82, 0.85], "text": ["MELEE", "COMBO"]},
+  "reel-ac-full": {"at": 20.2, "crop": [0.0, 0.0, 0.66, 0.82], "text": ["AC SHADOWS", "REEL"]},
+  "reel-ac-short": {"at": 10.8, "erase": [958, 534, 26, 36], "crop": [0.23, 0.0, 0.6, 0.93], "text": ["LEAD", "ANIMATOR"], "bright": 1.2, "drop": 380},
+  "reel-nec-full": {"at": 0.5, "crop": [0.12, 0.02, 0.92, 0.82], "text": ["NECROMUNDA", "REEL"], "bright": 1.25},
+  "reel-nec-short": {"at": 16.25, "crop": [0.56, 0.0, 0.9, 0.78], "text": ["KEYFRAME", "CINEMATICS"], "bright": 1.15, "drop": 520},
+  "workshop-promo-01": {"at": 96.1, "crop": [0.12, 0.1, 0.82, 0.9], "text": ["LEARN", "SYSTEMS"], "bright": 1.3, "workshop": true, "art": 1},
+  "workshop-promo-02": {"at": 52.5, "crop": [0.0, 0.2, 0.75, 1.0], "text": ["AAA", "PIPELINES"], "bright": 1.25, "workshop": true, "art": 2},
+  "workshop-promo-03": {"at": 85.1, "crop": [0.0, 0.08, 0.68, 0.9], "text": ["BUILD THE", "SYSTEM"], "workshop": true},
+  "workshop-promo-04": {"at": 98.8, "crop": [0.0, 0.08, 0.72, 0.92], "text": ["NO EXPERIENCE?", "START HERE"], "workshop": true}
+}

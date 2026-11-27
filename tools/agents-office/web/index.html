@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="office-token" content="__OFFICE_TOKEN__">
+<title>Agents Office</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+  <h1>Agents Office</h1>
+  <span id="summary">loading…</span>
+  <span id="clock"></span>
+</header>
+<main>
+  <section id="floor" aria-label="Office floor">
+    <div class="zoom" role="group" aria-label="Zoom">
+      <button type="button" class="ghost" id="zoom-out" aria-label="Zoom out">−</button>
+      <button type="button" class="ghost" id="zoom-fit">Fit all</button>
+      <button type="button" class="ghost" id="zoom-in" aria-label="Zoom in">+</button>
+      <span id="zoom-label" class="hint">fit</span>
+    </div>
+    <div id="view"><canvas id="office" width="960" height="540"></canvas></div>
+    <p class="hint">Click an agent to see it in the panels. The page only reads status files: no tokens are spent until you send a chat message.</p>
+    <div class="card" id="fame"><h3>Hall of Fame</h3><div id="fame-list"></div></div>
+  </section>
+  <aside>
+    <nav role="tablist">
+      <button role="tab" data-tab="status" class="on">Status</button>
+      <button role="tab" data-tab="overview">Overview</button>
+      <button role="tab" data-tab="chat">Chat</button>
+      <button role="tab" data-tab="debug">Debug</button>
+    </nav>
+    <div id="tab-status" class="tab on"></div>
+    <div id="tab-overview" class="tab"></div>
+    <div id="tab-chat" class="tab">
+      <div id="chat-head"></div>
+      <div id="chat-log" aria-live="polite"></div>
+      <form id="chat-form">
+        <textarea id="chat-text" rows="3" placeholder="Message to this session (costs tokens only when sent)"></textarea>
+        <div class="row">
+          <button type="submit" id="chat-send">Send</button>
+          <button type="button" id="open-terminal">Open in a terminal</button>
+        </div>
+      </form>
+      <p class="hint" id="chat-note">The message resumes the session in the background (claude -p --resume). A terminal that already shows this session does not see these turns until it resumes again; tools that need a permission prompt are refused there.</p>
+    </div>
+    <div id="tab-debug" class="tab">
+      <div id="debug-info"></div>
+      <form id="project-form" class="row">
+        <input id="project-path" placeholder="Full path of a project folder">
+        <button type="submit">Add project</button>
+      </form>
+      <pre id="debug-raw"></pre>
+    </div>
+  </aside>
+</main>
+<script src="/scene.js"></script>
+<script src="/office.js"></script>
+</body>
+</html>

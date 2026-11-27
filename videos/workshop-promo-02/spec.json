@@ -1,0 +1,19 @@
+{
+  "engine_and_version": "Unreal Engine (version not stated in the video)",
+  "core_technical_thesis": "Ad for the Unreal for Animators workshop at iAnimate",
+  "shown_in_video": [
+    "the instructor introduces their lead gameplay animator experience",
+    "Unreal Authorized Instructor badge on screen"
+  ],
+  "not_in_video": [
+    "a tutorial or step-by-step technique",
+    "a stated engine version"
+  ],
+  "verified_timestamps": {
+    "source 31 to 68.95 s": "Cut ends after 'technical expert and instructor' is introduced, before the next sentence (local transcript)"
+  },
+  "candidate_thumbnail_timestamps": [
+    31
+  ],
+  "owner_checked": false
+}

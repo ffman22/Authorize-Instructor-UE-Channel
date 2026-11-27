@@ -14,6 +14,10 @@ Source of truth for Gemini and Claude when they act as the owner's social media 
 - High contrast, one accent color, face large on one side, text on the other. Readable at phone size. No clutter.
 - Produce 2-3 variants per video for A/B testing; log which won.
 
+- Owner approves every thumbnail before it is used: show the image, what it is built from, and the text.
+- Vertical covers follow the owner's template (Drive `6-EditableAssets`); title and blocks stay inside the 3:4 profile grid crop.
+- Comment keyword: `UNREALZERO` only on iAnimate workshop ads; `UNREAL` on channel and series videos.
+
 ## Audience
 - Define the ideal viewer per video before scripting. Segments to tailor for: (1) working animators moving to Unreal, (2) people trying to enter the game industry, (3) technical animators and gameplay animators, (4) students and hobbyists. Each video names one primary segment and one problem.
 - Record the chosen segment in the manifest or script header so metrics can be compared by segment.

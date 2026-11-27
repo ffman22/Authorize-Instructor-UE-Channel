@@ -31,9 +31,10 @@ Facts (description and notes): {facts}
 Return JSON only, with exactly these keys:
  "description": the YouTube description body (2-4 sentences, keywords early, NO links, NO hashtags),
  "hashtags": 3-5 hashtags with #, first three are the most relevant (e.g. #unrealengine, #ue5),
- "tags": 8-15 YouTube search tags without #, specific phrases viewers search,
+ "tags": 5-8 YouTube search tags without #, specific to THIS video (phrases viewers search); no generic
+   niche or viral tags, those come from tools/tags_base.json,
  "first_comment": a question that invites replies (max 200 chars),
- "instagram": caption: hook line, one sentence of value, a question, then 5-8 hashtags; no links,
+ "instagram": caption: hook line, one sentence of value, a question, then exactly 5 hashtags (2 about this video, 2 niche, 1 broad); no links,
  "tiktok": caption max 150 chars before the hashtags, then 3-5 hashtags; no links,
  "threads": post max 400 chars, conversational, ends with a question, at most one hashtag,
  "community": YouTube Community post max 600 chars, teases the video and asks a poll-style question."""
