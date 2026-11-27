@@ -3,9 +3,20 @@
 Source of truth for Gemini and Claude when they act as the owner's social media manager and coach. Language: files in English, chat with the owner in Spanish.
 
 ## Who and what
-- Carlo, Lead Gameplay Animator at Ubisoft (AC Shadows, Black Flag), Unreal Authorized Instructor Gold. Channels: YouTube "Carlo Animator", Instagram @carlo.animator, TikTok @carloaninator, Threads @carlo.animator. Workshop: https://ianimate.net/workshops/unreal-for-animators
+- Carlo, 13+ years of experience. Lead Gameplay Animator at Ubisoft Bordeaux (AC Black Flag Resynced, AC Shadows: Claws of Awaji), Lead Animator on Daimon Blades (Streum On Studio), Unreal Authorized Instructor Gold. Channels: YouTube "Carlo Animator", Instagram @carlo.animator, TikTok @carloaninator, Threads @carlo.animator. Workshop: https://ianimate.net/workshops/unreal-for-animators
 - Voice: the owner records English voiceovers himself. Spanish Shorts only occasionally, generated.
 - Content: Unreal tutorials, demo reels, industry commentary. Long videos and Shorts in equal numbers. Shorts are cut from own long videos only.
+
+## Series (owner, 27 Nov 2026)
+AAA UE5 Secrets; Tutorials; Gameplay analysis; Live streams (viewer questions and tips); My work showcase (demo reels); Unreal Engine Developer Community tutorials; Workshop promotion videos and clips.
+
+## Voice and philosophy
+Source: the owner's interview, https://www.animotionx.com/en/post/interview-with-carlo-andrei-mercado-thinking-of-animation-as-a-system
+- Animation is a system: it has to serve gameplay, not only look good in isolation. Function and feel, not just form.
+- The engine is a place to express yourself through systems; learn how the pieces talk to each other.
+- "Don't stop at beautiful motion. Show that you can make it play."
+- Teaching makes people more independent; learning is shared and curious.
+- Scripts sound spoken and warm, never corporate or robotic.
 
 ## Thumbnails (YouTube, Shorts covers)
 - Emotion first: the owner's face in the frame (he is shooting a photo set: smiling, thinking, "I have an idea", surprised, skeptical). Pick the expression that matches the promise.

@@ -103,18 +103,8 @@
 
 ---
 
-## 5. Introduction Video (60-90s)
-*   **Goal:** Establish authority (Ubisoft/Instructor) and drive workshop traffic.
-*   **Structure:**
-    1. **Hook (0-5 s):** A promise to one segment, e.g. "Animators get stuck the moment their animation has to work inside a game engine. I animate gameplay for Assassin's Creed, and here is what I teach to fix that." Confirm every fact with the owner before recording.
-    2. **Story (5-45 s):** Who I am (Lead Gameplay Animator at Ubisoft, Unreal Authorized Instructor Gold), the gap between making animation and making it work in Unreal, one proof clip from own footage.
-    3. **What you get (45-75 s):** What the channel posts (2 Shorts a week, tutorials, reels), who it is for, and the workshop as the deeper path.
-    4. **CTA (last 10 s):** One ask: subscribe, or the workshop link in the description. Ask the viewer to comment their biggest Unreal animation problem.
-    5. **Shot list:** talking head with a smile and an "idea" expression, over-the-shoulder screen capture of Unreal, 2-3 own clips (AC Shadows reel needs its permission proof). Thumbnail: face + 2-4 words naming the promise.
-*   **Adaptation:** 
-    *   *YouTube:* Landscape video, links in pinned comment. 
-    *   *TikTok/IG:* Cut to 30s version, vertical format. 
-    *   *Threads:* Text summary + static portrait photo.
+## 5. Introduction Video
+Current scripts, including the short and long credibility intros: `docs/script_intro.md`.
 
 ---
 

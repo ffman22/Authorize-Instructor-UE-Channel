@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Hand a text task to Google Gemini and print or save the answer.
 
-Usage: gemini_task.py "<prompt>" [--file TEXT_FILE ...] [--model NAME] [--out FILE] [--usage]
+Usage: gemini_task.py "<prompt>" [--file TEXT_FILE ...] [--youtube URL ...] [--model NAME] [--out FILE] [--usage]
 Credentials: GEMINI_API_KEY from the environment or .env (never printed).
 Privacy: the prompt and any --file content are sent to Google. Never pass secrets;
 .env, token*.json and client_secret*.json are refused.
@@ -20,6 +20,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("prompt", nargs="?", help="task for Gemini")
     ap.add_argument("--file", action="append", default=[], help="text file to include (repeatable)")
+    ap.add_argument("--youtube", action="append", default=[], help="public YouTube URL to watch (repeatable)")
     ap.add_argument("--model", default=gc.DEFAULT_MODEL, help=f"default {gc.DEFAULT_MODEL}")
     ap.add_argument("--out", help="write the answer here instead of stdout")
     ap.add_argument("--usage", action="store_true", help="print today's token use and exit")
@@ -32,7 +33,8 @@ def main():
         ap.error("prompt is required unless --usage")
     try:
         parts = [gc.text_part(a.prompt), *gc.file_parts(a.file)]
-        answer = gc.generate(parts, model=a.model, task="gemini_task")
+        parts += [{"file_data": {"file_uri": u}} for u in a.youtube]
+        answer = gc.generate(parts, model=a.model, task="gemini_task", low_media=bool(a.youtube))
     except gc.GeminiError as e:
         gc.die(e)
     if a.out:

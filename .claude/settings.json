@@ -26,6 +26,16 @@
     ],
     "PreToolUse": [
       {
+        "matcher": "Read|mcp__.*__vidiq_(video_watch|watch_shortform_content|video_transcript)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/gemini-route.mjs\"",
+            "timeout": 5
+          }
+        ]
+      },
+      {
         "matcher": "Bash",
         "hooks": [
           {
@@ -46,6 +56,15 @@
       }
     ],
     "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/gemini-route.mjs\"",
+            "timeout": 5
+          }
+        ]
+      },
       {
         "hooks": [
           {

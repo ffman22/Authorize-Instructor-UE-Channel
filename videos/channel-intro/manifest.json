@@ -1,0 +1,35 @@
+{
+  "id": "channel-intro",
+  "format": "long",
+  "topic": "Animation",
+  "title": "Make Your Animation Playable in Unreal Engine 5",
+  "source": {
+    "drive_file_id": "",
+    "file": "data/clips/channel-intro-raw.mp4"
+  },
+  "start": 0,
+  "duration": 132,
+  "rights": "own",
+  "proof": "",
+  "credit": "",
+  "description": "Unreal for Animators workshop at iAnimate: https://ianimate.net/workshops/unreal-for-animators\n\nI'm Carlo Mercado, Lead Gameplay Animator at Ubisoft Bordeaux and Unreal Authorized Instructor (Gold). Here is what this channel teaches: making animation work in Unreal Engine 5.\n\nComment UNREAL for more information\n\nLearn Unreal Engine animation systems with me:\nWorkshop (Unreal for Animators): https://ianimate.net/workshops/unreal-for-animators\niAnimate on YouTube: https://www.youtube.com/@iAnimateWS\nTikTok: https://www.tiktok.com/@carloaninator\nMy channel: https://www.youtube.com/@Carlo-Animator",
+  "hashtags": [
+    "#unrealengine5",
+    "#gameanimation",
+    "#gamedev"
+  ],
+  "tags": [
+    "gameplay animation unreal",
+    "unreal for animators",
+    "unreal authorized instructor"
+  ],
+  "first_comment": "Comment UNREAL for more information",
+  "ig_caption": "I'm Carlo Mercado, Lead Gameplay Animator at Ubisoft Bordeaux and Unreal Authorized Instructor (Gold). Here is what this channel teaches: making animation work in Unreal Engine 5.\n\nComment UNREAL for more information\n\nFull videos on YouTube: subscribe to Carlo Animator.\nWorkshop: https://ianimate.net/workshops/unreal-for-animators",
+  "tiktok_caption": "I'm Carlo Mercado, Lead Gameplay Animator at Ubisoft Bordeaux and Unreal Authorized Instructor (Gold). Here is what this channel teaches: making animation work in Unreal Engine 5. #unrealengine5 #gameanimation #gamedev\nComment UNREAL for more information\nYouTube and workshop links in my bio.",
+  "threads_post": "I'm Carlo Mercado, Lead Gameplay Animator at Ubisoft Bordeaux and Unreal Authorized Instructor (Gold). Here is what this channel teaches: making animation work in Unreal Engine 5.\n\nComment UNREAL for more information",
+  "community_post": "I'm Carlo Mercado, Lead Gameplay Animator at Ubisoft Bordeaux and Unreal Authorized Instructor (Gold). Here is what this channel teaches: making animation work in Unreal Engine 5.\n\nComment UNREAL for more information",
+  "video_file": "data/clips/channel-intro-final.mp4",
+  "privacy": "private",
+  "publish_at": "",
+  "ready_to_publish": false
+}

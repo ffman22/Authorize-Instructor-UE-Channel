@@ -1,0 +1,16 @@
+{
+  "engine_and_version": "Unreal Engine 5 (exact version to confirm from the recording)",
+  "core_technical_thesis": "Who the owner is, what the channel teaches and who it is for",
+  "shown_in_video": [
+    "credentials",
+    "channel topics",
+    "workshop and comment call to action"
+  ],
+  "not_in_video": [
+    "a step-by-step tutorial",
+    "employer internal workflows"
+  ],
+  "verified_timestamps": {},
+  "candidate_thumbnail_timestamps": [],
+  "owner_checked": false
+}

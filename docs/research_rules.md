@@ -23,6 +23,7 @@ Source: Drive docs 01-08 (creators with 1M+ followers and competitor breakdowns)
 - Assemble in stages (hook, lesson, ending) and show each stage. Before a stage, list the clips needed and their resolution.
 
 ## Shorts
+- Full beats and editing rules for scripts: `docs/script_format.md` (result first, then credibility, then the lesson).
 - Formats: micro-tip 20-30 s; progressive escalation 50-60 s (same clip 3 times, step badge); series "AAA UE5 Secret:" 20-35 s (spoken hook, top banner `AAA UE5 SECRET`).
 - Frame 0 shows the result or the problem; no greetings. State the core concept aloud in the first 3 s.
 - Credibility flash (about 3 s, 2 s in micro-tips) around 0:04 without pausing the voice.

@@ -1,0 +1,39 @@
+{
+  "id": "ue5-secret-01-state-aliases",
+  "format": "short",
+  "topic": "Animation",
+  "title": "AAA UE5 Secret: Stop State Machine Spider Webs",
+  "source": {
+    "drive_file_id": "",
+    "file": "data/clips/ue5-secret-01-state-aliases-raw.mp4"
+  },
+  "start": 0,
+  "duration": 33,
+  "rights": "own",
+  "proof": "",
+  "credit": "",
+  "description": "Unreal for Animators workshop at iAnimate: https://ianimate.net/workshops/unreal-for-animators\n\nState machine turning into a spider web? A State Alias lets one transition work from many states in Unreal Engine 5.\n\nComment UNREAL for more information\n\nLearn Unreal Engine animation systems with me:\nWorkshop (Unreal for Animators): https://ianimate.net/workshops/unreal-for-animators\niAnimate on YouTube: https://www.youtube.com/@iAnimateWS\nTikTok: https://www.tiktok.com/@carloaninator\nMy channel: https://www.youtube.com/@Carlo-Animator",
+  "hashtags": [
+    "#unrealengine5",
+    "#gameanimation",
+    "#gamedev"
+  ],
+  "tags": [
+    "state alias ue5",
+    "state machine ue5",
+    "animation blueprint transitions"
+  ],
+  "first_comment": "Comment UNREAL for more information",
+  "ig_caption": "State machine turning into a spider web? A State Alias lets one transition work from many states in Unreal Engine 5.\n\nComment UNREAL for more information\n\nFull videos on YouTube: subscribe to Carlo Animator.\nWorkshop: https://ianimate.net/workshops/unreal-for-animators",
+  "tiktok_caption": "State machine turning into a spider web? A State Alias lets one transition work from many states in Unreal Engine 5. #unrealengine5 #gameanimation #gamedev\nComment UNREAL for more information\nYouTube and workshop links in my bio.",
+  "threads_post": "State machine turning into a spider web? A State Alias lets one transition work from many states in Unreal Engine 5.\n\nComment UNREAL for more information",
+  "community_post": "State machine turning into a spider web? A State Alias lets one transition work from many states in Unreal Engine 5.\n\nComment UNREAL for more information",
+  "cta": {
+    "type": "soon",
+    "keyword": "UNREAL"
+  },
+  "video_file": "",
+  "privacy": "private",
+  "publish_at": "",
+  "ready_to_publish": false
+}

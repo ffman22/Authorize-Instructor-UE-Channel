@@ -1,0 +1,39 @@
+{
+  "id": "ue5-secret-03-cached-pose",
+  "format": "short",
+  "topic": "Animation",
+  "title": "AAA UE5 Secret: Clean Ground-to-Air with Cached Poses",
+  "source": {
+    "drive_file_id": "",
+    "file": "data/clips/ue5-secret-03-cached-pose-raw.mp4"
+  },
+  "start": 0,
+  "duration": 33,
+  "rights": "own",
+  "proof": "",
+  "credit": "",
+  "description": "Unreal for Animators workshop at iAnimate: https://ianimate.net/workshops/unreal-for-animators\n\nReuse your ground locomotion inside the air state machine with a cached pose in Unreal Engine 5.\n\nComment UNREAL for more information\n\nLearn Unreal Engine animation systems with me:\nWorkshop (Unreal for Animators): https://ianimate.net/workshops/unreal-for-animators\niAnimate on YouTube: https://www.youtube.com/@iAnimateWS\nTikTok: https://www.tiktok.com/@carloaninator\nMy channel: https://www.youtube.com/@Carlo-Animator",
+  "hashtags": [
+    "#unrealengine5",
+    "#gameanimation",
+    "#gamedev"
+  ],
+  "tags": [
+    "cached pose ue5",
+    "locomotion state machine",
+    "jump animation blueprint"
+  ],
+  "first_comment": "Comment UNREAL for more information",
+  "ig_caption": "Reuse your ground locomotion inside the air state machine with a cached pose in Unreal Engine 5.\n\nComment UNREAL for more information\n\nFull videos on YouTube: subscribe to Carlo Animator.\nWorkshop: https://ianimate.net/workshops/unreal-for-animators",
+  "tiktok_caption": "Reuse your ground locomotion inside the air state machine with a cached pose in Unreal Engine 5. #unrealengine5 #gameanimation #gamedev\nComment UNREAL for more information\nYouTube and workshop links in my bio.",
+  "threads_post": "Reuse your ground locomotion inside the air state machine with a cached pose in Unreal Engine 5.\n\nComment UNREAL for more information",
+  "community_post": "Reuse your ground locomotion inside the air state machine with a cached pose in Unreal Engine 5.\n\nComment UNREAL for more information",
+  "cta": {
+    "type": "soon",
+    "keyword": "UNREAL"
+  },
+  "video_file": "",
+  "privacy": "private",
+  "publish_at": "",
+  "ready_to_publish": false
+}

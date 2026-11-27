@@ -7,4 +7,5 @@ description: Hand a mechanical text task (summary, transcript cleanup, long-vide
 2. Run `.venv/Scripts/python.exe tools/gemini_task.py "<task>" [--file F ...] [--out FILE]`.
 3. On HTTP 503 retry once after a minute; on 404 check `DEFAULT_MODEL` in the tool.
 4. Reply in 3–5 lines: the answer first, then the file path if `--out` was used.
-5. Video moments: `tools/find_moments.py <video> --own`; copy per platform: `tools/gemini_copy.py <manifest>`; thumbnails: `tools/make_thumbnail.py <manifest>`; tokens today: `gemini_task.py --usage`.
+5. Video or audio review: `tools/gemini_review.py <file> --type <type>`; images: `tools/gemini_image.py`.
+6. Video moments: `tools/find_moments.py <video> --own`; copy per platform: `tools/gemini_copy.py <manifest>`; thumbnails: `tools/make_thumbnail.py <manifest>`; tokens today: `gemini_task.py --usage`.

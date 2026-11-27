@@ -1,0 +1,17 @@
+{
+  "engine_and_version": "Unreal Engine 5 (exact version to confirm from the recording)",
+  "core_technical_thesis": "A conduit holds the shared condition and each exit holds its specific one",
+  "shown_in_video": [
+    "adding a Conduit",
+    "setting the conduit rule",
+    "specific rules on each exit"
+  ],
+  "not_in_video": [
+    "State Alias setup",
+    "cached poses",
+    "a performance gain"
+  ],
+  "verified_timestamps": {},
+  "candidate_thumbnail_timestamps": [],
+  "owner_checked": false
+}

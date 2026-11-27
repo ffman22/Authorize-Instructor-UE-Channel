@@ -1,0 +1,39 @@
+{
+  "id": "channel-intro-social",
+  "format": "short",
+  "topic": "Animation",
+  "title": "What you'll find on Carlo Animator",
+  "source": {
+    "drive_file_id": "",
+    "file": "data/clips/channel-intro-social-raw.mp4"
+  },
+  "start": 0,
+  "duration": 45,
+  "rights": "own",
+  "proof": "",
+  "credit": "",
+  "description": "Unreal for Animators workshop at iAnimate: https://ianimate.net/workshops/unreal-for-animators\n\nWhat you'll find on my YouTube channel, Carlo Animator: AAA UE5 Secrets, tutorials, gameplay analysis, live Q&A streams and my work.\n\nComment UNREAL for more information\nYouTube: https://www.youtube.com/@Carlo-Animator?sub_confirmation=1",
+  "hashtags": [
+    "#unrealengine5",
+    "#gameanimation",
+    "#gamedev"
+  ],
+  "tags": [
+    "gameplay animation unreal",
+    "unreal for animators",
+    "unreal authorized instructor"
+  ],
+  "first_comment": "Comment UNREAL for more information",
+  "ig_caption": "What you'll find on my YouTube channel, Carlo Animator: AAA UE5 Secrets, tutorials, gameplay analysis, live Q&A streams and my work.\n\nComment UNREAL for more information\n\nYouTube link in bio: Carlo Animator.\nWorkshop: https://ianimate.net/workshops/unreal-for-animators",
+  "tiktok_caption": "What you'll find on my YouTube channel, Carlo Animator: AAA UE5 Secrets, tutorials, gameplay analysis, live Q&A streams and my work. #unrealengine5 #gameanimation #gamedev\nComment UNREAL for more information\nYouTube and workshop links in my bio.",
+  "threads_post": "What you'll find on my YouTube channel, Carlo Animator: AAA UE5 Secrets, tutorials, gameplay analysis, live Q&A streams and my work.\n\nComment UNREAL for more information\nYouTube: https://www.youtube.com/@Carlo-Animator?sub_confirmation=1",
+  "community_post": "What you'll find on my YouTube channel, Carlo Animator: AAA UE5 Secrets, tutorials, gameplay analysis, live Q&A streams and my work.\n\nComment UNREAL for more information",
+  "video_file": "",
+  "privacy": "private",
+  "publish_at": "",
+  "ready_to_publish": false,
+  "cta": {
+    "type": "full",
+    "keyword": "UNREAL"
+  }
+}

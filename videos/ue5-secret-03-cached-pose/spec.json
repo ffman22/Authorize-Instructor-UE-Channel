@@ -1,0 +1,16 @@
+{
+  "engine_and_version": "Unreal Engine 5 (exact version to confirm from the recording)",
+  "core_technical_thesis": "A cached ground locomotion pose is reused inside the air state machine",
+  "shown_in_video": [
+    "saving a cached pose",
+    "using the cached pose in the air state machine"
+  ],
+  "not_in_video": [
+    "State Alias or conduit setup",
+    "motion matching",
+    "a performance gain"
+  ],
+  "verified_timestamps": {},
+  "candidate_thumbnail_timestamps": [],
+  "owner_checked": false
+}

@@ -1,0 +1,17 @@
+{
+  "engine_and_version": "Unreal Engine 5 (exact version to confirm from the recording)",
+  "core_technical_thesis": "One State Alias transition replaces duplicated transitions from many states",
+  "shown_in_video": [
+    "adding a State Alias",
+    "checking the aliased states",
+    "one transition rule from the alias"
+  ],
+  "not_in_video": [
+    "conduits",
+    "cached poses",
+    "a performance gain"
+  ],
+  "verified_timestamps": {},
+  "candidate_thumbnail_timestamps": [],
+  "owner_checked": false
+}

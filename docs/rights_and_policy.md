@@ -11,6 +11,8 @@ The source workflow downloads viral TikTok clips and reposts them. A clip belong
 | `permission` | Creator agreed in writing (DM, email) | link or screenshot path in `proof` |
 | `cc` | Creative Commons that allows reuse | license + attribution in `credit` |
 
+**Owner's work footage under NDA** (owner, 27 Nov 2026): he holds the permissions for his videos and cannot share the documents; his approval is enough. Use `permission` with `proof` = `Owner attestation <date>: permission held under NDA, approved for <video id>`. It covers footage of his own work, never other creators' videos, and not unannounced projects. The upload approval gate still applies.
+
 A clip without one of these does not render. `tools/rights_gate.py` enforces it.
 
 ## Clip sources that fit
