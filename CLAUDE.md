@@ -34,6 +34,7 @@ Read this first; open only the file the task needs (map in `README.md`). Budgets
 - After editing any `CLAUDE.md`, rule or skill: `python3 tools/context_budget.py --strict`. Check: exit code 0.
 
 ## Gotchas
+- Schedules in docs go stale: check the live YouTube status before warning about or changing a publish date.
 - Project kit: docs stay flat in `docs/`. Recap with `/clear` (`.claude/kit.json`), not `kit-recap`/`kit-audit` (they expect `docs/pipeline/`). `kit.py update` re-seeds duplicates: remove them (`docs/decisions.md`).
 - Cloud Python: use a virtual environment (`./install.sh` creates it).
 - ffmpeg must exist (`ffmpeg -version`).

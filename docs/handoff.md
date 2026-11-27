@@ -1,15 +1,12 @@
 # Handoff
 
 ## Checkpoint
-Checkpoint (27 Nov 2026; overwrite at every recap, never append; under 12 lines):
-- Windows: `.venv/Scripts/python.exe`. YouTube OAuth ok; slots 21:00 UTC. TikTok manual. Only live change on 27 Nov: promo-02 schedule removed.
-- Waiting on owner: approval sheet (`out/review/approval-sheet.html`). promo-02 (`02kXzKy5Xkw`) is paused (private, no date, verified). Owner approved covers only (not titles/dates): B, C, D, E ("5"). A (AC Short, 10.8 s frame) approved too; F, G not judged. Sheet rebuilt with `--live`; AC Short `VLqWpu-oKA4` approved, scheduled 28 Nov 17:00 UTC (18:00 test: compare results); first comment by hand (403); social copy and TikTok/Instagram unposted, old TikTok unchecked. Scheduled: Necromunda full 29, Necromunda Short 30, AC full 2 Dec; promos 03/04 unscheduled. None has an approval record.
-- Live SD upscales: curves Short `f-_v3SD4Kv8`, Lyra Short `a-LFa0dxDCM` (Instagram/TikTok copies unchecked). HD curves render ready but starts mid-explanation: re-cut under 60 s. Lyra needs a 1080p export.
-- Splashes (YouTube, social, workshop) approved. Paused: AC Short, promo-02/03/04. New renders with sound (AC Short YT + social, promos 01-04) are approved (cuts and sound only). Next: owner reviews the sheet (texts), picks dates, checks spec.json. Old uploads have no splash. promo-01 stays live as is.  After approval: apply live titles, links, descriptions, tags, thumbnails; move Necromunda full to 3 Dec (no live-update tool yet). Do not touch `CYHdjr9YwV0`.
-- Gates built and tested: `tools/approval.py`, spec.json, no hashtags in titles, HD. `--selftest` passes. No video has a spec.json yet.
-- Covers re-rendered from the owner's template (`out/thumbs/`, old ones in `previous/`); 16:9 covers unchanged.
-- Rules: `docs/research_rules.md`. Gemini analysis: Drive `8-gemini-analysis`. Open: yt-dlp versus the never-rip rule.
-- Assets untracked from git; commits not pushed. Drive for Desktop not installed, so media does not sync.
-- Editor eval (27 Nov): github.com/nateherkai/herk-edit-kit (MIT code). Proposed, not approved: isolated pilot in a sibling folder on one own long video; local Whisper for word timings, Gemini for terms/cut proposals. Scripts unaudited, video 7jHXoPGnA4c not analysed, nothing installed. Need: which video. Whisper test done on the course promo (`small.en`, CPU, 130 s in ~20 s; `out/transcripts/promo-workshop-v2/`): pauses mostly within 0.25 s (worst 0.6 s), names need correction. PyAV 19 breaks file input (pipe ffmpeg PCM). GPU now works (venv: `nvidia-cublas-cu12`, `nvidia-cudnn-cu12`, not in requirements; add DLL dirs to PATH): `large-v3-turbo` + terms + `condition_on_previous_text=False` is best text (`large-fixed/`, 4 s, worst timing 0.55 s); terms without that flag loop. `small.en` times pauses better (mean 0.15 s). Scripts only in scratchpad. Owner corrected names, closing lines and the 1:05 line in `large-fixed/`; other grammar not reviewed by ear. Test only: nothing from it gets published. Promos 01-04 now `rights: permission` (owner statement as proof, gate passes); no YouTube change.
-- Kit 0.5.0 installed; `/agentes-office` fails (plugin bug). Open: stay on flat `docs/` or migrate to kit layout.
-- Older open: first comment 403 (`q-yt-audit`); Instagram highlights; ffman22 collaborator invites; Instagram plan in `docs/instagram_plan.md`.
+Checkpoint (27 Nov 2026, evening; overwrite at every recap):
+- AC Short `VLqWpu-oKA4`: permission, approved, private, 28 Nov 17:00 UTC. After public: pin GAMEANIMATION comment by hand (403); compare 18:00 results.
+- AC social copy (`out/reel-ac-short-social.mp4`) unposted on TikTok/Instagram; check and remove the old TikTok scheduled 28 Nov 22:00 Paris.
+- Scheduled without approval record (private): Necromunda full `R_N6gR8UifE` 29 Nov, Short `5LVCkL862zw` 30, AC full `246Bwxt6YpQ` 2 Dec, 21:00 UTC; no comment CTA yet.
+- Paused: promo-02/03/04 (private, undated). Owner reviews texts, dates, spec.json; then apply live metadata, move Necromunda full to 3 Dec (no update tool). promo-01 stays.
+- Live SD upscales: curves `f-_v3SD4Kv8` (re-cut under 60 s from HD), Lyra `a-LFa0dxDCM` (needs 1080p export); Instagram/TikTok copies unchecked.
+- Editor pilot (herk-edit-kit) not approved; needs which video. Whisper test notes: `docs/decisions.md`.
+- Open: yt-dlp versus never-rip rule; `/agentes-office` plugin bug (use `open-office.cmd`); Drive for Desktop missing, media not synced.
+- Older: YouTube API audit (`q-yt-audit`); Instagram highlights; ffman22 collaborator invites; plan in `docs/instagram_plan.md`.
